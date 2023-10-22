@@ -1,0 +1,14 @@
+{
+  "hash": "c6bedf6d30e0b14359281791ba14e159",
+  "result": {
+    "markdown": "---\ntitle: \"Anomaly/Outlier Matrix\"\nauthor: \"Huayu Liang\"\ndate: \"2023-10-06\"\ncategories: [ML, code, anomaly matrix, outlier matrix]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
