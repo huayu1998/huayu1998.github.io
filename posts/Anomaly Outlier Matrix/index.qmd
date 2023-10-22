@@ -1,0 +1,13 @@
+---
+title: "Anomaly/Outlier Matrix"
+author: "Huayu Liang"
+date: "2023-10-06"
+categories: [ML, code, anomaly matrix, outlier matrix]
+image: "image.jpg"
+---
+
+This is a post with executable code.
+
+```{r}
+1 + 1
+```

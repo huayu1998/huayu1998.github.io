@@ -1,0 +1,13 @@
+---
+title: "Classification"
+author: "Huayu Liang"
+date: "2023-10-06"
+categories: [ML, code, classification]
+image: "image.jpg"
+---
+
+This is a post with executable code.
+
+```{r}
+1 + 1
+```

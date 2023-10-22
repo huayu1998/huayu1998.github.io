@@ -1,0 +1,13 @@
+---
+title: "Probability Theory and Random Variables"
+author: "Huayu Liang"
+date: "2023-10-06"
+categories: [ML, code, probability]
+image: "image.jpg"
+---
+
+This is a post with executable code.
+
+```{r}
+1 + 1
+```

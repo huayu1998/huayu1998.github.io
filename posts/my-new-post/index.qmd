@@ -1,9 +1,0 @@
----
-title: "ML Classification Post"
-author: "Huayu Liang"
-date: "2023-10-06"
-categories: [ML, classification, algorithm]
-image: "image.jpg"
----
-
-This is a machine learning post.
