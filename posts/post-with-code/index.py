@@ -1,57 +1,55 @@
----
-title: Post With Code
-author: Huayu Liang
-date: now
-categories:
-  - news
-  - code
-  - analysis
-image: image.jpg
-jupyter:
-  jupytext:
-    formats: 'qmd:quarto,py:percent,md,ipynb'
-    text_representation:
-      extension: .qmd
-      format_name: quarto
-      format_version: '1.0'
-      jupytext_version: 1.15.2
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
----
+# ---
+# title: Post With Code
+# author: Huayu Liang
+# date: now
+# categories:
+#   - news
+#   - code
+#   - analysis
+# image: image.jpg
+# jupyter:
+#   jupytext:
+#     formats: qmd:quarto,py:percent,md,ipynb
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.15.2
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
 
-Here is some sample R code
+# %% [markdown]
+# Here is some sample R code
+#
+# ```{r}
+# 1 + 1
+# ```
+#
+# But we also want to run Python
 
-```{r}
-1 + 1
-```
-
-But we also want to run Python
-
-```{python}
+# %%
 for i in range(9):
   print(i)
-```
 
-```{python}
+# %%
 x = 5
-```
 
-```{python}
+# %%
 #| echo: false
 #| output: false
 # Testing a change in Jupyter notebook
-# I'm writing this now in RStudio
 # I'm writing this now in Jupyterlab again
 import warnings
 
 warnings.filterwarnings("ignore")
-```
 
-The plot below is from the [Seaborn Python library documentation](https://seaborn.pydata.org/examples/horizontal_boxplot.html)
+# %% [markdown]
+# The plot below is from the [Seaborn Python library documentation](https://seaborn.pydata.org/examples/horizontal_boxplot.html)
 
-```{python}
+# %%
 import seaborn as sns
 import matplotlib.pyplot as plt
 sns.set_theme(style="ticks")
@@ -71,11 +69,11 @@ sns.stripplot(planets, x="distance", y="method", size=4, color=".3")
 ax.xaxis.grid(True)
 ax.set(ylabel="")
 sns.despine(trim=True, left=True)
-```
 
-The plot below is from the [Yellowbrick Python library documentation](https://www.scikit-yb.org/en/latest/api/features/jointplot.html?highlight=joint%20plot#joint-plot-visualization):
+# %% [markdown]
+# The plot below is from the [Yellowbrick Python library documentation](https://www.scikit-yb.org/en/latest/api/features/jointplot.html?highlight=joint%20plot#joint-plot-visualization):
 
-```{python}
+# %%
 import numpy as np
 from yellowbrick.datasets import load_concrete
 from yellowbrick.features import JointPlotVisualizer
@@ -88,4 +86,3 @@ visualizer = JointPlotVisualizer(columns="cement")
 
 visualizer.fit_transform(X, y)        # Fit and transform the data
 visualizer.show()                     # Finalize and render the figure
-```

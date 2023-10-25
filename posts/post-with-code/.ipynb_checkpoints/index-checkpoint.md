@@ -9,11 +9,11 @@ categories:
 image: image.jpg
 jupyter:
   jupytext:
-    formats: 'qmd:quarto,py:percent,md,ipynb'
+    formats: qmd:quarto,py:percent,md,ipynb
     text_representation:
-      extension: .qmd
-      format_name: quarto
-      format_version: '1.0'
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
       jupytext_version: 1.15.2
   kernelspec:
     display_name: Python 3 (ipykernel)
@@ -29,21 +29,20 @@ Here is some sample R code
 
 But we also want to run Python
 
-```{python}
+```python
 for i in range(9):
   print(i)
 ```
 
-```{python}
+```python
 x = 5
 ```
 
-```{python}
+```python
 #| echo: false
 #| output: false
 # Testing a change in Jupyter notebook
-# I'm writing this now in RStudio
-# I'm writing this now in Jupyterlab again
+# I'm writing this now in Jupyterlab
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -51,7 +50,7 @@ warnings.filterwarnings("ignore")
 
 The plot below is from the [Seaborn Python library documentation](https://seaborn.pydata.org/examples/horizontal_boxplot.html)
 
-```{python}
+```python
 import seaborn as sns
 import matplotlib.pyplot as plt
 sns.set_theme(style="ticks")
@@ -75,7 +74,7 @@ sns.despine(trim=True, left=True)
 
 The plot below is from the [Yellowbrick Python library documentation](https://www.scikit-yb.org/en/latest/api/features/jointplot.html?highlight=joint%20plot#joint-plot-visualization):
 
-```{python}
+```python
 import numpy as np
 from yellowbrick.datasets import load_concrete
 from yellowbrick.features import JointPlotVisualizer
