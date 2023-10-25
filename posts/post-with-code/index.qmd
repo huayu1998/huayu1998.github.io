@@ -2,6 +2,8 @@
 title: Post With Code
 author: Huayu Liang
 date: now
+execute: 
+  echo: fenced
 categories:
   - news
   - code
@@ -89,3 +91,5 @@ visualizer = JointPlotVisualizer(columns="cement")
 visualizer.fit_transform(X, y)        # Fit and transform the data
 visualizer.show()                     # Finalize and render the figure
 ```
+
+This is a change to the markdown text.
