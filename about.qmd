@@ -6,13 +6,13 @@ about:
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://twitter.com/KiraLL98
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/huayu-liang-7ba623213/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/huayu1998
 ---
 
 About this blog
