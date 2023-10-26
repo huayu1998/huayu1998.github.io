@@ -1,11 +1,11 @@
 ---
 title: Post With Code
 author: Huayu Liang
-date: now
+date: '2023-10-05'
+execute:
+  echo: fenced
 categories:
-  - news
-  - code
-  - analysis
+  - random
 image: image.jpg
 jupyter:
   jupytext:
@@ -89,3 +89,5 @@ visualizer = JointPlotVisualizer(columns="cement")
 visualizer.fit_transform(X, y)        # Fit and transform the data
 visualizer.show()                     # Finalize and render the figure
 ```
+
+This is a change to the markdown text.
