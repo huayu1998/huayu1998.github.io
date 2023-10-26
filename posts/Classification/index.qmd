@@ -1,13 +1,9 @@
 ---
 title: "Classification"
 author: "Huayu Liang"
-date: "2023-10-06"
-categories: [ML, code, classification]
-image: "image.jpg"
+date: "now"
+categories: [ML, visualization, classification]
+image: "classification.png"
 ---
 
-This is a post with executable code.
-
-```{r}
-1 + 1
-```
+Image from the source: [post image](https://vitalflux.com/k-nearest-neighbors-explained-with-python-examples/)

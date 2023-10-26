@@ -1,13 +1,9 @@
 ---
-title: "Clustering"
+title: "Linear & Nonlinear Regression"
 author: "Huayu Liang"
-date: "2023-10-06"
-categories: [ML, code, linear regressson]
-image: "image.jpg"
+date: "now"
+categories: [ML, visualization, linear regressson]
+image: "linear.png"
 ---
 
-This is a post with executable code.
-
-```{r}
-1 + 1
-```
+Image from the source: [post image](https://vitalflux.com/linear-regression-explained-python-sklearn-examples/)

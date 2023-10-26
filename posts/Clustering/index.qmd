@@ -1,13 +1,9 @@
 ---
 title: "Clustering"
 author: "Huayu Liang"
-date: "2023-10-06"
-categories: [ML, code, clustering]
-image: "image.jpg"
+date: "now"
+categories: [ML, visualization, clustering]
+image: "clustering.png"
 ---
 
-This is a post with executable code.
-
-```{r}
-1 + 1
-```
+Image from the source: [post image](https://vitalflux.com/when-to-use-which-clustering-algorithms/)

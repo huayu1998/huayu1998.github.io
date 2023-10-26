@@ -1,13 +1,9 @@
 ---
 title: "Anomaly/Outlier Matrix"
 author: "Huayu Liang"
-date: "2023-10-06"
-categories: [ML, code, anomaly matrix, outlier matrix]
-image: "image.jpg"
+date: "now"
+categories: [ML, visualization, matrix]
+image: "matrix.png"
 ---
 
-This is a post with executable code.
-
-```{r}
-1 + 1
-```
+Image from the source: [post image](https://medium.com/@mehulved1503/outlier-detection-and-anomaly-detection-with-machine-learning-caa96b34b7f6)
