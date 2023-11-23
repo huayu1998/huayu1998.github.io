@@ -6,4 +6,4 @@ categories: [ML, visualization, matrix]
 image: "matrix.png"
 ---
 
-Image from the source: [post image](https://medium.com/@mehulved1503/outlier-detection-and-anomaly-detection-with-machine-learning-caa96b34b7f6)
+Image from the source: [Outlier Detection and Anomaly Detection with Machine Learning](https://medium.com/@mehulved1503/outlier-detection-and-anomaly-detection-with-machine-learning-caa96b34b7f6)

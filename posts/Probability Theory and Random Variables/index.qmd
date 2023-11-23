@@ -6,4 +6,4 @@ categories: [ML, visualization, probability theory]
 image: "probability.png"
 ---
 
-Image from the source: [post image](https://vitalflux.com/maximum-likelihood-estimation-concepts-examples/)
+Image from the source: [Analytics Yogi: Maximum Likelihood Estimation: Concepts, Examples](https://vitalflux.com/maximum-likelihood-estimation-concepts-examples/)

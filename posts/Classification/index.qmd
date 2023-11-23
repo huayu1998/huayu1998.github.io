@@ -6,4 +6,4 @@ categories: [ML, visualization, classification]
 image: "classification.png"
 ---
 
-Image from the source: [post image](https://vitalflux.com/k-nearest-neighbors-explained-with-python-examples/)
+Image from the source: [Analytics Yogi: K-Nearest Neighbors (KNN) Python Examples](https://vitalflux.com/k-nearest-neighbors-explained-with-python-examples/)

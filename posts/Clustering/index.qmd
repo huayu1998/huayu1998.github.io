@@ -6,4 +6,4 @@ categories: [ML, visualization, clustering]
 image: "clustering.png"
 ---
 
-Image from the source: [post image](https://vitalflux.com/when-to-use-which-clustering-algorithms/)
+Image from the source: [Analytics Yogi: When to Use Which Clustering Algorithms?](https://vitalflux.com/when-to-use-which-clustering-algorithms/)

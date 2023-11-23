@@ -6,4 +6,4 @@ categories: [ML, visualization, linear regressson]
 image: "linear.png"
 ---
 
-Image from the source: [post image](https://vitalflux.com/linear-regression-explained-python-sklearn-examples/)
+Image from the source: [Analytics Yogi: Linear Regression Python Examples](https://vitalflux.com/linear-regression-explained-python-sklearn-examples/)
