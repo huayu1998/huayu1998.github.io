@@ -13,9 +13,17 @@ website:
         href: https://twitter.com/KiraLL98
       - icon: linkedin
         href: https://www.linkedin.com/in/huayu-liang-7ba623213/
+        
+  sidebar:
+    style: "docked"
+    search: true
+    contents: auto
+    
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: sketchy
+      dark: superhero
     css: styles.css
 
 editor: visual

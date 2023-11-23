@@ -7,3 +7,23 @@ image: "classification.png"
 ---
 
 Image from the source: [Analytics Yogi: K-Nearest Neighbors (KNN) Python Examples](https://vitalflux.com/k-nearest-neighbors-explained-with-python-examples/)
+
+# Exploring Classification Algorithms with Python
+
+## What is Classification? 
+
+## Dateset Selection
+
+## Visualizing the Data
+
+## Classification Algorithms
+
+### 1. Naive Bayes
+
+### 2. Logistic Regression
+
+### 3. **K-Nearest Neighbors (KNN)**
+
+### 4. Confusion Matrix
+
+## Conclusion

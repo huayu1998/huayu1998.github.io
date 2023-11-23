@@ -18,14 +18,14 @@
     "href": "posts/Probability Theory and Random Variables/index.html",
     "title": "Probability Theory and Random Variables",
     "section": "",
-    "text": "Image from the source: post image"
+    "text": "Image from the source: Analytics Yogi: Maximum Likelihood Estimation: Concepts, Examples"
   },
   {
     "objectID": "posts/Anomaly Outlier Matrix/index.html",
     "href": "posts/Anomaly Outlier Matrix/index.html",
     "title": "Anomaly/Outlier Matrix",
     "section": "",
-    "text": "Image from the source: post image"
+    "text": "Image from the source: Outlier Detection and Anomaly Detection with Machine Learning"
   },
   {
     "objectID": "posts/Classification/index.html",
@@ -46,14 +46,14 @@
     "href": "posts/Linear and Nonlinear Regression/index.html",
     "title": "Linear & Nonlinear Regression",
     "section": "",
-    "text": "Image from the source: post image"
+    "text": "Image from the source: Analytics Yogi: Linear Regression Python Examples"
   },
   {
     "objectID": "posts/Clustering/index.html",
     "href": "posts/Clustering/index.html",
     "title": "Clustering",
     "section": "",
-    "text": "Image from the source: post image"
+    "text": "Image from the source: Analytics Yogi: When to Use Which Clustering Algorithms?"
   },
   {
     "objectID": "index.html",
@@ -61,5 +61,82 @@
     "title": "Huayu Liang",
     "section": "",
     "text": "Classification\n\n\n\n\n\n\n\nML\n\n\nvisualization\n\n\nclassification\n\n\n\n\n\n\n\n\n\n\n\nNov 23, 2023\n\n\nHuayu Liang\n\n\n\n\n\n\n  \n\n\n\n\nAnomaly/Outlier Matrix\n\n\n\n\n\n\n\nML\n\n\nvisualization\n\n\nmatrix\n\n\n\n\n\n\n\n\n\n\n\nNov 23, 2023\n\n\nHuayu Liang\n\n\n\n\n\n\n  \n\n\n\n\nLinear & Nonlinear Regression\n\n\n\n\n\n\n\nML\n\n\nvisualization\n\n\nlinear regressson\n\n\n\n\n\n\n\n\n\n\n\nNov 23, 2023\n\n\nHuayu Liang\n\n\n\n\n\n\n  \n\n\n\n\nProbability Theory and Random Variables\n\n\n\n\n\n\n\nML\n\n\nvisualization\n\n\nprobability theory\n\n\n\n\n\n\n\n\n\n\n\nNov 23, 2023\n\n\nHuayu Liang\n\n\n\n\n\n\n  \n\n\n\n\nClustering\n\n\n\n\n\n\n\nML\n\n\nvisualization\n\n\nclustering\n\n\n\n\n\n\n\n\n\n\n\nNov 23, 2023\n\n\nHuayu Liang\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nrandom\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2023\n\n\nHuayu Liang\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nrandom\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2023\n\n\nHuayu Liang\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Classification/index.html#what-is-classification",
+    "href": "posts/Classification/index.html#what-is-classification",
+    "title": "Classification",
+    "section": "What is Classification?",
+    "text": "What is Classification?"
+  },
+  {
+    "objectID": "posts/Classification/index.html#dateset-selection",
+    "href": "posts/Classification/index.html#dateset-selection",
+    "title": "Classification",
+    "section": "Dateset Selection",
+    "text": "Dateset Selection"
+  },
+  {
+    "objectID": "posts/Classification/index.html#visualizing-the-data",
+    "href": "posts/Classification/index.html#visualizing-the-data",
+    "title": "Classification",
+    "section": "Visualizing the Data",
+    "text": "Visualizing the Data"
+  },
+  {
+    "objectID": "posts/Classification/index.html#classification-algorithms",
+    "href": "posts/Classification/index.html#classification-algorithms",
+    "title": "Classification",
+    "section": "Classification Algorithms",
+    "text": "Classification Algorithms\n\n1. Naive Bayes\n\n\n2. Logistic Regression\n\n\n3. K-Nearest Neighbors (KNN)\n\n\n4. Confusion Matrix"
+  },
+  {
+    "objectID": "posts/Classification/index.html#conclusion",
+    "href": "posts/Classification/index.html#conclusion",
+    "title": "Classification",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "posts/Classification/classification.html",
+    "href": "posts/Classification/classification.html",
+    "title": "Classification",
+    "section": "",
+    "text": "Image from the source: Analytics Yogi: K-Nearest Neighbors (KNN) Python Examples"
+  },
+  {
+    "objectID": "posts/Classification/classification.html#what-is-classification",
+    "href": "posts/Classification/classification.html#what-is-classification",
+    "title": "Classification",
+    "section": "What is Classification?",
+    "text": "What is Classification?"
+  },
+  {
+    "objectID": "posts/Classification/classification.html#dateset-selection",
+    "href": "posts/Classification/classification.html#dateset-selection",
+    "title": "Classification",
+    "section": "Dateset Selection",
+    "text": "Dateset Selection"
+  },
+  {
+    "objectID": "posts/Classification/classification.html#visualizing-the-data",
+    "href": "posts/Classification/classification.html#visualizing-the-data",
+    "title": "Classification",
+    "section": "Visualizing the Data",
+    "text": "Visualizing the Data"
+  },
+  {
+    "objectID": "posts/Classification/classification.html#classification-algorithms",
+    "href": "posts/Classification/classification.html#classification-algorithms",
+    "title": "Classification",
+    "section": "Classification Algorithms",
+    "text": "Classification Algorithms\n\n1. Naive Bayes\n\n\n2. Logistic Regression\n\n\n3. K-Nearest Neighbors (KNN)\n\n\n4. Confusion Matrix"
+  },
+  {
+    "objectID": "posts/Classification/classification.html#conclusion",
+    "href": "posts/Classification/classification.html#conclusion",
+    "title": "Classification",
+    "section": "Conclusion",
+    "text": "Conclusion"
   }
 ]
