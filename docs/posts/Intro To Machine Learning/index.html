@@ -9,7 +9,7 @@
 <meta name="author" content="Huayu Liang">
 <meta name="dcterms.date" content="2023-11-28">
 
-<title>Huayu Liang - Anomaly/Outlier Matrix</title>
+<title>Huayu Liang - Introduction to Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,8 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../posts/Linear and Nonlinear Regression/index.html" rel="next">
-<link href="../../posts/post-with-code/index.html" rel="prev">
+<link href="../../posts/Clustering/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -157,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/Classification/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/Anomaly Outlier Matrix/index.html">Anomaly/Outlier Matrix</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/Classification/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/Intro To Machine Learning/index.html">Introduction to Machine Learning</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -170,11 +169,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">Anomaly/Outlier Matrix</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+      <div class="quarto-title-block"><div><h1 class="title">Introduction to Machine Learning</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
                                 <div class="quarto-categories">
                 <div class="quarto-category">ML</div>
-                <div class="quarto-category">visualization</div>
-                <div class="quarto-category">matrix</div>
+                <div class="quarto-category">introduction</div>
               </div>
                   </div>
   </div>
@@ -239,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/Anomaly Outlier Matrix/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../posts/Anomaly Outlier Matrix/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Anomaly/Outlier Matrix</span></a>
   </div>
 </li>
@@ -263,8 +261,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/welcome/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome To My Blog</span></a>
+  <a href="../../posts/Intro To Machine Learning/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Introduction to Machine Learning</span></a>
   </div>
 </li>
       </ul>
@@ -281,11 +279,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Image from the source: <a href="https://medium.com/@mehulved1503/outlier-detection-and-anomaly-detection-with-machine-learning-caa96b34b7f6">Outlier Detection and Anomaly Detection with Machine Learning</a></p>
+<p>Welcome to the Machine Learning World! This blog post covers all the basic concepts of Machine Learning that you’ll need to know as a beginner.</p>
+<p><img src="ML.jpeg" class="img-fluid"></p>
+<p>In today’s world, Machine Learning applications are omnipresent, seamlessly integrating into various aspects of our daily lives. Consider, for instance, the personalized search experience on Google, where Machine Learning algorithms suggest the most relevant results based on your input keywords. Similarly, major platforms like Facebook, YouTube, and Amazon employ recommendation systems to propose products tailored to individual user preferences. Notably, Apple utilizes Machine Learning algorithms for facial and fingerprint recognition, enabling users to unlock their devices without relying on traditional passwords. In essence, Machine Learning has significantly enhanced the convenience and efficiency of our everyday activities.</p>
+<section id="what-is-machine-learning" class="level1">
+<h1>What is Machine Learning?</h1>
+<p>In 1959, Arthur Samuel provided a defining perspective: “Machine Learning is the field of study that gives the computer the ability to learn without explicitly programmed.” A more technical definition emerged in 1997 from Tome Michel: “A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.”</p>
+<p>In general terms, Machine Learning (ML) stands as a subset of Artificial Intelligence (AI) with a primary focus on crafting algorithms and models. These models empower computers to learn autonomously and make predictions or decisions without explicit programming. The overarching goal of machine learning is to develop systems capable of learning from data, enhancing their performance over time.</p>
+</section>
+<section id="why-machine-learning" class="level1">
+<h1>Why Machine Learning?</h1>
+<p>To underscore the significance of Machine Learning, let’s examine the case of spam email recognition. Initially, one must scrutinize the characteristics of spam emails, such as errors, links, and specific keywords like “bank card,” “free,” and “congratulation.” The traditional approach involves analyzing these traits and crafting a program to detect them consistently across all emails. This results in lengthy and intricate code that requires considerable effort for maintenance.</p>
+<p>In contrast, Machine Learning automates the exploration of spam email characteristics, resulting in significantly shorter and more manageable code. Moreover, machine learning algorithms consistently outperform traditional methods.</p>
+<p>In summary, several reasons advocate for the adoption of Machine Learning algorithms over traditional methods:</p>
+<ol type="1">
+<li><p><strong>Efficiency:</strong> Machine learning algorithms are faster, demand less computational power, and deliver superior results compared to their traditional counterparts.</p></li>
+<li><p><strong>Problem-solving Capability:</strong> Machine learning techniques can tackle complex problems that traditional methods may find challenging.</p></li>
+<li><p><strong>Adaptability:</strong> Machine learning systems exhibit adaptability to new data, particularly valuable in fluctuating environments.</p></li>
+<li><p><strong>Exploration of Complicated Problems:</strong> Machine learning algorithms excel in exploring intricate problems with large datasets.</p></li>
+</ol>
+<p>It’s crucial to note that building a Machine Learning model requires a substantial volume of training data for accurate learning. The model often requires thousands of diverse data points to achieve high accuracy, emphasizing the paramount importance of data in the realm of Machine Learning and Data Science.</p>
+</section>
+<section id="types-of-machine-learning-algorithms" class="level1">
+<h1>Types of Machine Learning Algorithms</h1>
+<p>Machine learning algorithms can be broadly classified into three primary types: <strong><em>supervised</em></strong> learning, <strong><em>unsupervised</em></strong> learning, and <strong><em>reinforcement</em></strong> learning. Let’s delve into each category:</p>
+<section id="supervised-learning" class="level4">
+<h4 class="anchored" data-anchor-id="supervised-learning"><strong>Supervised Learning:</strong></h4>
+<p><em>Definition:</em> In supervised learning, the algorithm undergoes training using a labeled dataset where each input corresponds to a specific output. The objective is for the algorithm to discern the relationship between inputs and outputs, enabling it to make predictions on new, unseen data.</p>
+<p><em><strong>Examples</strong>:</em></p>
+<ul>
+<li><p>Classification: Predicting discrete labels or categories (e.g., spam or not spam).</p>
+<p><img src="spam.png" class="img-fluid"></p></li>
+<li><p>Regression: Predicting continuous values (e.g., forecasting house prices).</p>
+<p><img src="house.png" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="unsupervised-learning" class="level4">
+<h4 class="anchored" data-anchor-id="unsupervised-learning"><strong>Unsupervised Learning:</strong></h4>
+<p><em>Definition:</em> Unsupervised learning entails training the algorithm on an unlabeled dataset. The algorithm’s aim is to discover patterns, structures, or relationships within the data without explicit guidance on what to identify.</p>
+<p><img src="unsupervised.png" class="img-fluid"></p>
+<p><em><strong>Examples</strong>:</em></p>
+<ul>
+<li><p>Clustering: Grouping similar data points together (e.g., customer segmentation).</p></li>
+<li><p>Dimensionality Reduction: Streamlining the number of features while retaining crucial information.</p></li>
+</ul>
+</section>
+<section id="reinforcement-learning" class="level4">
+<h4 class="anchored" data-anchor-id="reinforcement-learning"><strong>Reinforcement Learning:</strong></h4>
+<p><em>Definition:</em> Reinforcement learning involves an agent interacting with an environment. The agent takes actions, and the environment responds with feedback in the form of rewards or penalties. The ultimate goal is for the agent to learn optimal strategies that maximize cumulative rewards over time.</p>
+<p><em><strong>Examples</strong>:</em></p>
+<ul>
+<li><p>Game Playing: Acquiring skills in playing games through rewards for successful moves.</p></li>
+<li><p>Robotics: Training robots to execute tasks based on feedback derived from their actions.</p></li>
+</ul>
+</section>
+</section>
+<section id="use-cases-of-machine-learning" class="level1">
+<h1>Use Cases of Machine Learning</h1>
+<p>Machine learning finds practical applications across a wide array of industries, spanning manufacturing, retail, healthcare, life sciences, travel and hospitality, financial services, and energy, feedstock, and utilities. Examples of these applications include:</p>
+<ul>
+<li><p><strong><em>Manufacturing</em></strong>: Utilizing machine learning for predictive maintenance and condition monitoring.</p></li>
+<li><p><strong><em>Retail</em></strong>: Implementing machine learning for upselling and cross-channel marketing strategies.</p></li>
+<li><p><strong><em>Healthcare and Life Sciences</em></strong>: Applying machine learning for disease identification and risk assessment.</p></li>
+<li><p><strong><em>Travel and Hospitality</em></strong>: Employing machine learning for dynamic pricing mechanisms.</p></li>
+<li><p><strong><em>Financial Services</em></strong>: Utilizing machine learning for risk analytics and regulatory compliance.</p></li>
+<li><p><strong><em>Energy, Feedstock, and Utilities</em></strong>: Leveraging machine learning for optimizing energy demand and supply.</p></li>
+</ul>
+</section>
+<section id="section" class="level1">
+<h1></h1>
 
 
 <!-- -->
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -689,28 +756,110 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../posts/post-with-code/index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Post With Code</span>
+      <a href="../../posts/Clustering/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Clustering</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../posts/Linear and Nonlinear Regression/index.html" class="pagination-link">
-        <span class="nav-page-text">Linear &amp; Nonlinear Regression</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Anomaly/Outlier Matrix"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Introduction to Machine Learning"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Huayu Liang"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "now"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [ML, visualization, matrix]</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "matrix.png"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Image from the source: <span class="co">[</span><span class="ot">Outlier Detection and Anomaly Detection with Machine Learning</span><span class="co">](https://medium.com/@mehulved1503/outlier-detection-and-anomaly-detection-with-machine-learning-caa96b34b7f6)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> now</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [ML, introduction]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Welcome to the Machine Learning World! This blog post covers all the basic concepts of Machine Learning that you'll need to know as a beginner.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="al">![](ML.jpeg)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>In today's world, Machine Learning applications are omnipresent, seamlessly integrating into various aspects of our daily lives. Consider, for instance, the personalized search experience on Google, where Machine Learning algorithms suggest the most relevant results based on your input keywords. Similarly, major platforms like Facebook, YouTube, and Amazon employ recommendation systems to propose products tailored to individual user preferences. Notably, Apple utilizes Machine Learning algorithms for facial and fingerprint recognition, enabling users to unlock their devices without relying on traditional passwords. In essence, Machine Learning has significantly enhanced the convenience and efficiency of our everyday activities.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu"># What is Machine Learning? </span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>In 1959, Arthur Samuel provided a defining perspective: "Machine Learning is the field of study that gives the computer the ability to learn without explicitly programmed." A more technical definition emerged in 1997 from Tome Michel: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E."</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>In general terms, Machine Learning (ML) stands as a subset of Artificial Intelligence (AI) with a primary focus on crafting algorithms and models. These models empower computers to learn autonomously and make predictions or decisions without explicit programming. The overarching goal of machine learning is to develop systems capable of learning from data, enhancing their performance over time.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu"># Why Machine Learning?</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>To underscore the significance of Machine Learning, let's examine the case of spam email recognition. Initially, one must scrutinize the characteristics of spam emails, such as errors, links, and specific keywords like "bank card," "free," and "congratulation." The traditional approach involves analyzing these traits and crafting a program to detect them consistently across all emails. This results in lengthy and intricate code that requires considerable effort for maintenance.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>In contrast, Machine Learning automates the exploration of spam email characteristics, resulting in significantly shorter and more manageable code. Moreover, machine learning algorithms consistently outperform traditional methods.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>In summary, several reasons advocate for the adoption of Machine Learning algorithms over traditional methods:</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Efficiency:** Machine learning algorithms are faster, demand less computational power, and deliver superior results compared to their traditional counterparts.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Problem-solving Capability:** Machine learning techniques can tackle complex problems that traditional methods may find challenging.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Adaptability:** Machine learning systems exhibit adaptability to new data, particularly valuable in fluctuating environments.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**Exploration of Complicated Problems:** Machine learning algorithms excel in exploring intricate problems with large datasets.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>It's crucial to note that building a Machine Learning model requires a substantial volume of training data for accurate learning. The model often requires thousands of diverse data points to achieve high accuracy, emphasizing the paramount importance of data in the realm of Machine Learning and Data Science.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Types of Machine Learning Algorithms</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Machine learning algorithms can be broadly classified into three primary types: ***supervised*** learning, ***unsupervised*** learning, and ***reinforcement*** learning. Let's delve into each category:</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">#### **Supervised Learning:**</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>*Definition:* In supervised learning, the algorithm undergoes training using a labeled dataset where each input corresponds to a specific output. The objective is for the algorithm to discern the relationship between inputs and outputs, enabling it to make predictions on new, unseen data.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>***Examples**:*</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Classification: Predicting discrete labels or categories (e.g., spam or not spam).</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="al">![](spam.png)</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Regression: Predicting continuous values (e.g., forecasting house prices).</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="al">![](house.png)</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">#### **Unsupervised Learning:**</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>*Definition:* Unsupervised learning entails training the algorithm on an unlabeled dataset. The algorithm's aim is to discover patterns, structures, or relationships within the data without explicit guidance on what to identify.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="al">![](unsupervised.png)</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>***Examples**:*</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Clustering: Grouping similar data points together (e.g., customer segmentation).</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Dimensionality Reduction: Streamlining the number of features while retaining crucial information.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">#### **Reinforcement Learning:**</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>*Definition:* Reinforcement learning involves an agent interacting with an environment. The agent takes actions, and the environment responds with feedback in the form of rewards or penalties. The ultimate goal is for the agent to learn optimal strategies that maximize cumulative rewards over time.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>***Examples**:*</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Game Playing: Acquiring skills in playing games through rewards for successful moves.</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Robotics: Training robots to execute tasks based on feedback derived from their actions.</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="fu"># Use Cases of Machine Learning</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>Machine learning finds practical applications across a wide array of industries, spanning manufacturing, retail, healthcare, life sciences, travel and hospitality, financial services, and energy, feedstock, and utilities. Examples of these applications include:</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>***Manufacturing***: Utilizing machine learning for predictive maintenance and condition monitoring.</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>***Retail***: Implementing machine learning for upselling and cross-channel marketing strategies.</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>***Healthcare and Life Sciences***: Applying machine learning for disease identification and risk assessment.</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>***Travel and Hospitality***: Employing machine learning for dynamic pricing mechanisms.</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>***Financial Services***: Utilizing machine learning for risk analytics and regulatory compliance.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>***Energy, Feedstock, and Utilities***: Leveraging machine learning for optimizing energy demand and supply.</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="fu"># </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/huayu1998/huayu1998.github.io/blob/main/posts/Anomaly Outlier Matrix/index.qmd" class="toc-action">View source</a></p></div></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/huayu1998/huayu1998.github.io/blob/main/posts/Intro To Machine Learning/index.qmd" class="toc-action">View source</a></p></div></div></div></div></footer></body></html>

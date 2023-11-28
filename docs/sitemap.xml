@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://huayu1998.github.io/index.html</loc>
-    <lastmod>2023-11-28T19:47:38.922Z</lastmod>
+    <lastmod>2023-11-28T21:50:24.300Z</lastmod>
   </url>
   <url>
     <loc>https://huayu1998.github.io/posts/Clustering/index.html</loc>
@@ -10,6 +10,22 @@
   </url>
   <url>
     <loc>https://huayu1998.github.io/posts/Classification/index.html</loc>
-    <lastmod>2023-11-28T19:47:17.298Z</lastmod>
+    <lastmod>2023-11-28T21:09:22.731Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huayu1998.github.io/posts/Linear and Nonlinear Regression/index.html</loc>
+    <lastmod>2023-11-28T20:50:23.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huayu1998.github.io/posts/Probability Theory and Random Variables/index.html</loc>
+    <lastmod>2023-11-28T20:50:35.482Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huayu1998.github.io/posts/Anomaly Outlier Matrix/index.html</loc>
+    <lastmod>2023-11-28T20:57:15.565Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huayu1998.github.io/posts/Intro To Machine Learning/index.html</loc>
+    <lastmod>2023-11-28T21:50:23.647Z</lastmod>
   </url>
 </urlset>
