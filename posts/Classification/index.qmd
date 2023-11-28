@@ -10,7 +10,7 @@ Image from the source: [Analytics Yogi: K-Nearest Neighbors (KNN) Python Example
 
 # Exploring Classification Algorithms with Python
 
-## What is Classification? 
+## What is Classification?
 
 ## Formula (if needed)
 

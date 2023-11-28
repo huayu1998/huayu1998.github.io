@@ -8,7 +8,7 @@ image: "linear.png"
 
 Image from the source: [Analytics Yogi: Linear Regression Python Examples](https://vitalflux.com/linear-regression-explained-python-sklearn-examples/)
 
-# Exploring Regression with Python 
+# Exploring Regression with Python
 
 ## What is Linear Regression?
 

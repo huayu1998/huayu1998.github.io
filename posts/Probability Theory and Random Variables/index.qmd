@@ -8,7 +8,7 @@ image: "probability.png"
 
 Image from the source: [Analytics Yogi: Maximum Likelihood Estimation: Concepts, Examples](https://vitalflux.com/maximum-likelihood-estimation-concepts-examples/)
 
-# Exploring Probability Theory and Random Variables with Python 
+# Exploring Probability Theory and Random Variables with Python
 
 ## Probability Theory
 
