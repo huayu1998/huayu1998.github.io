@@ -3,6 +3,11 @@ project:
   output-dir: docs
 
 website:
+  repo-url: https://github.com/huayu1998/huayu1998.github.io
+  repo-actions: [source]
+  back-to-top-navigation: true
+  reader-mode: true
+  page-navigation: true
   title: "Huayu Liang"
   navbar:
     right:
@@ -13,6 +18,7 @@ website:
         href: https://twitter.com/KiraLL98
       - icon: linkedin
         href: https://www.linkedin.com/in/huayu-liang-7ba623213/
+  site-url: https://huayu1998.github.io/
         
   sidebar:
     style: "docked"
