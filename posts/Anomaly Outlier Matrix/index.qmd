@@ -7,3 +7,15 @@ image: "matrix.png"
 ---
 
 Image from the source: [Outlier Detection and Anomaly Detection with Machine Learning](https://medium.com/@mehulved1503/outlier-detection-and-anomaly-detection-with-machine-learning-caa96b34b7f6)
+
+# Exploring Anomaly Outlier Detection in Machine Learning with Python
+
+## What is Anomaly Matrix?
+
+## What is Outlier Matrix?
+
+## Formula (if needed)
+
+## Application on \### Dataset of Anomaly/Outlier Matrix in Machine Learning
+
+## Conclusion

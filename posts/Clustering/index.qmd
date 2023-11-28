@@ -7,3 +7,13 @@ image: "clustering.png"
 ---
 
 Image from the source: [Analytics Yogi: When to Use Which Clustering Algorithms?](https://vitalflux.com/when-to-use-which-clustering-algorithms/)
+
+# Exploring Clustering with Python
+
+## What is Clustering?
+
+## Formula (if needed)
+
+## Application on \### Dataset of Clustering in Machine Learning
+
+## Conclusion 

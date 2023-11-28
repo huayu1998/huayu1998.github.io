@@ -18,14 +18,14 @@
     "href": "posts/Probability Theory and Random Variables/index.html",
     "title": "Probability Theory and Random Variables",
     "section": "",
-    "text": "Image from the source: Analytics Yogi: Maximum Likelihood Estimation: Concepts, Examples\n\n\n\n\n\n Back to top"
+    "text": "Image from the source: Analytics Yogi: Maximum Likelihood Estimation: Concepts, Examples"
   },
   {
     "objectID": "posts/Anomaly Outlier Matrix/index.html",
     "href": "posts/Anomaly Outlier Matrix/index.html",
     "title": "Anomaly/Outlier Matrix",
     "section": "",
-    "text": "Image from the source: Outlier Detection and Anomaly Detection with Machine Learning\n\n\n\n\n\n Back to top"
+    "text": "Image from the source: Outlier Detection and Anomaly Detection with Machine Learning"
   },
   {
     "objectID": "posts/Classification/index.html",
@@ -46,14 +46,14 @@
     "href": "posts/Linear and Nonlinear Regression/index.html",
     "title": "Linear & Nonlinear Regression",
     "section": "",
-    "text": "Image from the source: Analytics Yogi: Linear Regression Python Examples\n\n\n\n\n\n Back to top"
+    "text": "Image from the source: Analytics Yogi: Linear Regression Python Examples"
   },
   {
     "objectID": "posts/Clustering/index.html",
     "href": "posts/Clustering/index.html",
     "title": "Clustering",
     "section": "",
-    "text": "Image from the source: Analytics Yogi: When to Use Which Clustering Algorithms?\n\n\n\n Back to top"
+    "text": "Image from the source: Analytics Yogi: When to Use Which Clustering Algorithms?"
   },
   {
     "objectID": "index.html",
@@ -145,5 +145,173 @@
     "title": "Introduction to Machine Learning",
     "section": "",
     "text": "Welcome to the Machine Learning World! This blog post covers all the basic concepts of Machine Learning that you’ll need to know as a beginner.\n\nIn today’s world, Machine Learning applications are omnipresent, seamlessly integrating into various aspects of our daily lives. Consider, for instance, the personalized search experience on Google, where Machine Learning algorithms suggest the most relevant results based on your input keywords. Similarly, major platforms like Facebook, YouTube, and Amazon employ recommendation systems to propose products tailored to individual user preferences. Notably, Apple utilizes Machine Learning algorithms for facial and fingerprint recognition, enabling users to unlock their devices without relying on traditional passwords. In essence, Machine Learning has significantly enhanced the convenience and efficiency of our everyday activities.\n\nWhat is Machine Learning?\nIn 1959, Arthur Samuel provided a defining perspective: “Machine Learning is the field of study that gives the computer the ability to learn without explicitly programmed.” A more technical definition emerged in 1997 from Tome Michel: “A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.”\nIn general terms, Machine Learning (ML) stands as a subset of Artificial Intelligence (AI) with a primary focus on crafting algorithms and models. These models empower computers to learn autonomously and make predictions or decisions without explicit programming. The overarching goal of machine learning is to develop systems capable of learning from data, enhancing their performance over time.\n\n\nWhy Machine Learning?\nTo underscore the significance of Machine Learning, let’s examine the case of spam email recognition. Initially, one must scrutinize the characteristics of spam emails, such as errors, links, and specific keywords like “bank card,” “free,” and “congratulation.” The traditional approach involves analyzing these traits and crafting a program to detect them consistently across all emails. This results in lengthy and intricate code that requires considerable effort for maintenance.\nIn contrast, Machine Learning automates the exploration of spam email characteristics, resulting in significantly shorter and more manageable code. Moreover, machine learning algorithms consistently outperform traditional methods.\nIn summary, several reasons advocate for the adoption of Machine Learning algorithms over traditional methods:\n\nEfficiency: Machine learning algorithms are faster, demand less computational power, and deliver superior results compared to their traditional counterparts.\nProblem-solving Capability: Machine learning techniques can tackle complex problems that traditional methods may find challenging.\nAdaptability: Machine learning systems exhibit adaptability to new data, particularly valuable in fluctuating environments.\nExploration of Complicated Problems: Machine learning algorithms excel in exploring intricate problems with large datasets.\n\nIt’s crucial to note that building a Machine Learning model requires a substantial volume of training data for accurate learning. The model often requires thousands of diverse data points to achieve high accuracy, emphasizing the paramount importance of data in the realm of Machine Learning and Data Science.\n\n\nTypes of Machine Learning Algorithms\nMachine learning algorithms can be broadly classified into three primary types: supervised learning, unsupervised learning, and reinforcement learning. Let’s delve into each category:\n\nSupervised Learning:\nDefinition: In supervised learning, the algorithm undergoes training using a labeled dataset where each input corresponds to a specific output. The objective is for the algorithm to discern the relationship between inputs and outputs, enabling it to make predictions on new, unseen data.\nExamples:\n\nClassification: Predicting discrete labels or categories (e.g., spam or not spam).\n\nRegression: Predicting continuous values (e.g., forecasting house prices).\n\n\n\n\nUnsupervised Learning:\nDefinition: Unsupervised learning entails training the algorithm on an unlabeled dataset. The algorithm’s aim is to discover patterns, structures, or relationships within the data without explicit guidance on what to identify.\n\nExamples:\n\nClustering: Grouping similar data points together (e.g., customer segmentation).\nDimensionality Reduction: Streamlining the number of features while retaining crucial information.\n\n\n\nReinforcement Learning:\nDefinition: Reinforcement learning involves an agent interacting with an environment. The agent takes actions, and the environment responds with feedback in the form of rewards or penalties. The ultimate goal is for the agent to learn optimal strategies that maximize cumulative rewards over time.\nExamples:\n\nGame Playing: Acquiring skills in playing games through rewards for successful moves.\nRobotics: Training robots to execute tasks based on feedback derived from their actions.\n\n\n\n\nUse Cases of Machine Learning\nMachine learning finds practical applications across a wide array of industries, spanning manufacturing, retail, healthcare, life sciences, travel and hospitality, financial services, and energy, feedstock, and utilities. Examples of these applications include:\n\nManufacturing: Utilizing machine learning for predictive maintenance and condition monitoring.\nRetail: Implementing machine learning for upselling and cross-channel marketing strategies.\nHealthcare and Life Sciences: Applying machine learning for disease identification and risk assessment.\nTravel and Hospitality: Employing machine learning for dynamic pricing mechanisms.\nFinancial Services: Utilizing machine learning for risk analytics and regulatory compliance.\nEnergy, Feedstock, and Utilities: Leveraging machine learning for optimizing energy demand and supply.\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/Probability Theory and Random Variables/index.html#probability-theory",
+    "href": "posts/Probability Theory and Random Variables/index.html#probability-theory",
+    "title": "Probability Theory and Random Variables",
+    "section": "Probability Theory",
+    "text": "Probability Theory"
+  },
+  {
+    "objectID": "posts/Probability Theory and Random Variables/index.html#random-variables",
+    "href": "posts/Probability Theory and Random Variables/index.html#random-variables",
+    "title": "Probability Theory and Random Variables",
+    "section": "Random Variables",
+    "text": "Random Variables"
+  },
+  {
+    "objectID": "posts/Probability Theory and Random Variables/index.html#use-case-in-machine-learning",
+    "href": "posts/Probability Theory and Random Variables/index.html#use-case-in-machine-learning",
+    "title": "Probability Theory and Random Variables",
+    "section": "Use Case in Machine Learning",
+    "text": "Use Case in Machine Learning"
+  },
+  {
+    "objectID": "posts/Probability Theory and Random Variables/index.html#code-example",
+    "href": "posts/Probability Theory and Random Variables/index.html#code-example",
+    "title": "Probability Theory and Random Variables",
+    "section": "Code Example",
+    "text": "Code Example"
+  },
+  {
+    "objectID": "posts/Clustering/index.html#what-is-clustering",
+    "href": "posts/Clustering/index.html#what-is-clustering",
+    "title": "Clustering",
+    "section": "What is Clustering?",
+    "text": "What is Clustering?"
+  },
+  {
+    "objectID": "posts/Clustering/index.html#conclusion",
+    "href": "posts/Clustering/index.html#conclusion",
+    "title": "Clustering",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "posts/Probability Theory and Random Variables/index.html#conclusion",
+    "href": "posts/Probability Theory and Random Variables/index.html#conclusion",
+    "title": "Probability Theory and Random Variables",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "posts/Clustering/index.html#application-on-of-clustering-in-machine-learning",
+    "href": "posts/Clustering/index.html#application-on-of-clustering-in-machine-learning",
+    "title": "Clustering",
+    "section": "Application on ### of Clustering in Machine Learning",
+    "text": "Application on ### of Clustering in Machine Learning"
+  },
+  {
+    "objectID": "posts/Clustering/index.html#application-on-dataset-of-clustering-in-machine-learning",
+    "href": "posts/Clustering/index.html#application-on-dataset-of-clustering-in-machine-learning",
+    "title": "Clustering",
+    "section": "Application on ### Dataset of Clustering in Machine Learning",
+    "text": "Application on ### Dataset of Clustering in Machine Learning"
+  },
+  {
+    "objectID": "posts/Clustering/index.html#formula-if-needed",
+    "href": "posts/Clustering/index.html#formula-if-needed",
+    "title": "Clustering",
+    "section": "Formula (if needed)",
+    "text": "Formula (if needed)"
+  },
+  {
+    "objectID": "posts/Linear and Nonlinear Regression/index.html#what-is-linear-regression",
+    "href": "posts/Linear and Nonlinear Regression/index.html#what-is-linear-regression",
+    "title": "Linear & Nonlinear Regression",
+    "section": "What is Linear Regression?",
+    "text": "What is Linear Regression?"
+  },
+  {
+    "objectID": "posts/Linear and Nonlinear Regression/index.html#what-is-non-linear-regression",
+    "href": "posts/Linear and Nonlinear Regression/index.html#what-is-non-linear-regression",
+    "title": "Linear & Nonlinear Regression",
+    "section": "What is Non-Linear Regression?",
+    "text": "What is Non-Linear Regression?"
+  },
+  {
+    "objectID": "posts/Linear and Nonlinear Regression/index.html#formulas-if-needed",
+    "href": "posts/Linear and Nonlinear Regression/index.html#formulas-if-needed",
+    "title": "Linear & Nonlinear Regression",
+    "section": "Formulas (if needed)",
+    "text": "Formulas (if needed)"
+  },
+  {
+    "objectID": "posts/Linear and Nonlinear Regression/index.html#application-on-dataset-of-regression-in-machine-learning",
+    "href": "posts/Linear and Nonlinear Regression/index.html#application-on-dataset-of-regression-in-machine-learning",
+    "title": "Linear & Nonlinear Regression",
+    "section": "Application on ### Dataset of Regression in Machine Learning",
+    "text": "Application on ### Dataset of Regression in Machine Learning"
+  },
+  {
+    "objectID": "posts/Linear and Nonlinear Regression/index.html#conslusions",
+    "href": "posts/Linear and Nonlinear Regression/index.html#conslusions",
+    "title": "Linear & Nonlinear Regression",
+    "section": "Conslusions",
+    "text": "Conslusions"
+  },
+  {
+    "objectID": "posts/Linear and Nonlinear Regression/index.html#conslusion",
+    "href": "posts/Linear and Nonlinear Regression/index.html#conslusion",
+    "title": "Linear & Nonlinear Regression",
+    "section": "Conslusion",
+    "text": "Conslusion"
+  },
+  {
+    "objectID": "posts/Anomaly Outlier Matrix/index.html#what-is-anomaly-matrix",
+    "href": "posts/Anomaly Outlier Matrix/index.html#what-is-anomaly-matrix",
+    "title": "Anomaly/Outlier Matrix",
+    "section": "What is Anomaly Matrix?",
+    "text": "What is Anomaly Matrix?"
+  },
+  {
+    "objectID": "posts/Anomaly Outlier Matrix/index.html#what-is-outlier-matrix",
+    "href": "posts/Anomaly Outlier Matrix/index.html#what-is-outlier-matrix",
+    "title": "Anomaly/Outlier Matrix",
+    "section": "What is Outlier Matrix?",
+    "text": "What is Outlier Matrix?"
+  },
+  {
+    "objectID": "posts/Anomaly Outlier Matrix/index.html#application-on-dataset-of-anomalyoutlier-matrix-in-machine-learning",
+    "href": "posts/Anomaly Outlier Matrix/index.html#application-on-dataset-of-anomalyoutlier-matrix-in-machine-learning",
+    "title": "Anomaly/Outlier Matrix",
+    "section": "Application on ### Dataset of Anomaly/Outlier Matrix in Machine Learning",
+    "text": "Application on ### Dataset of Anomaly/Outlier Matrix in Machine Learning"
+  },
+  {
+    "objectID": "posts/Anomaly Outlier Matrix/index.html#conclusion",
+    "href": "posts/Anomaly Outlier Matrix/index.html#conclusion",
+    "title": "Anomaly/Outlier Matrix",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "posts/Probability Theory and Random Variables/index.html#formula-if-needed",
+    "href": "posts/Probability Theory and Random Variables/index.html#formula-if-needed",
+    "title": "Probability Theory and Random Variables",
+    "section": "Formula (if needed)",
+    "text": "Formula (if needed)"
+  },
+  {
+    "objectID": "posts/Linear and Nonlinear Regression/index.html#formula-if-needed",
+    "href": "posts/Linear and Nonlinear Regression/index.html#formula-if-needed",
+    "title": "Linear & Nonlinear Regression",
+    "section": "Formula (if needed)",
+    "text": "Formula (if needed)"
+  },
+  {
+    "objectID": "posts/Classification/index.html#formula-if-needed",
+    "href": "posts/Classification/index.html#formula-if-needed",
+    "title": "Classification",
+    "section": "Formula (if needed)",
+    "text": "Formula (if needed)"
+  },
+  {
+    "objectID": "posts/Anomaly Outlier Matrix/index.html#formula-if-needed",
+    "href": "posts/Anomaly Outlier Matrix/index.html#formula-if-needed",
+    "title": "Anomaly/Outlier Matrix",
+    "section": "Formula (if needed)",
+    "text": "Formula (if needed)"
   }
 ]

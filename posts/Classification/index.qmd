@@ -12,6 +12,8 @@ Image from the source: [Analytics Yogi: K-Nearest Neighbors (KNN) Python Example
 
 ## What is Classification? 
 
+## Formula (if needed)
+
 ## Dateset Selection
 
 ## Visualizing the Data
