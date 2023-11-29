@@ -28,7 +28,7 @@ website:
 format:
   html:
     theme: 
-      light: sketchy
+      light: journal
       dark: superhero
     css: styles.css
 
