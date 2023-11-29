@@ -12,20 +12,54 @@ Image from the source: [Analytics Yogi: K-Nearest Neighbors (KNN) Python Example
 
 ## What is Classification?
 
-## Formula (if needed)
+The Classification algorithm, as a [Supervised Learning](https://en.wikipedia.org/wiki/Supervised_learning) technique, is employed to categorize new observations based on the knowledge gained from training data. In the classification process, the program utilizes a provided dataset or observations to learn how to assign new observations to distinct classes or groups, such as 0 or 1, red or blue, yes or no, spam or not spam, and so on. Terms like targets, labels, or categories are used interchangeably to denote these classes. As a supervised learning technique, the Classification algorithm requires labeled input data, encompassing both input and output information. The classification process involves transferring a discrete output function $f(y)$ to an input variable $(x)$.
 
-## Dateset Selection
+In simpler terms, classification serves as a form of pattern recognition, wherein classification algorithms analyze training data to identify similar patterns in new datasets.
 
-## Visualizing the Data
+## Types of Classification Algorithms
 
-## Classification Algorithms
+Various classification methods can be employed depending on the characteristics of the dataset under consideration. This variability stems from the extensive nature of the study of classification in statistics. Below lists the top five machine learning algorithms.
 
 ### 1. Naive Bayes
+
+As a popular supervised machine learning algorithm, Naïve Bayes classifier is used for classification tasks such as text classification. It belongs to the family of generative learning algorithms, which means that it models the distribution of inputs for a given class or category. This modeling relies on the assumption that, given the class, the features of the input data are conditionally independent, facilitating swift and accurate predictions.
+
+In statistics, Naïve Bayes classifiers are considered as simple probabilistic classifiers that apply Bayes' theorem. This theorem is based on the probability of a hypothesis, given the data. The Naïve Bayes classifier makes the simplifying assumption that all features in the input data are independent, a condition not always met in practical scenarios. Nevertheless, despite this simplification, the naive Bayes classifier is extensively employed due to its efficiency and commendable performance across various real-world applications.
+
+#### 1.1 Ma**thematical Formulation**
+
+Bayes theorem provides a way of computing posterior probability $P(c|x)$ from $P(c)$, $P(x)$ and $P(x|c)$. Look at the equation below
+
+$$
+P(c | x) = \frac{P(x | c) P(c)}{P(x)}
+$$
+
+Where,
+
+-   $P(c|x)$ is the posterior probability of *class* (c, *target*) given *predictor* (x, *attributes*).
+
+-   $P(c)$ is the prior probability of *class*.
+
+-   $P(x|c)$ is the likelihood which is the probability of the *predictor* given *class*.
+
+-   $P(x)$ is the prior probability of the *predictor*.
+
+#### 1.2 Applications of **Naive Bayes Algorithms**
 
 ### 2. Logistic Regression
 
 ### 3. **K-Nearest Neighbors (KNN)**
 
-### 4. Confusion Matrix
+### 4. Support Vector Machine
+
+### 5. Confusion Matrix
+
+## Dateset Selection
+
+## Visualizing the Data
 
 ## Conclusion
+
+$$
+P(E) = {n \choose k} p^k (2-p)^{n-k}
+$$
