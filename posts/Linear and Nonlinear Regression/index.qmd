@@ -10,12 +10,165 @@ Image from the source: [Analytics Yogi: Linear Regression Python Examples](https
 
 # Exploring Regression with Python
 
+Regression is a vital concept in machine learning that helps us model relationships between variables. In this blog post, we'll explore both linear and nonlinear regression, dive into the mathematical formulas, provide explanations, visualize the results, and work with a synthetic dataset.
+
 ## What is Linear Regression?
+
+Linear regression is a straightforward approach for modeling the relationship between a dependent variable $(Y)$ and one or more independent variables $(X)$.
+
+### Formula
+
+The formula for simple linear regression is:
+
+$$
+Y = \beta_0 + \beta_1 X
+$$
+
+where:
+
+-   $Y$ is the dependent variable.
+
+-   $X$ is the independent variable.
+
+-   $\beta_0$​ is the intercept.
+
+-   $\beta_1$​ is the slope.
+
+### Python Implementation
+
+```{python}
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+
+# Generate 'random' data
+np.random.seed(0)
+X = 2.5 * np.random.randn(100) + 1.5   # Array of 100 values with mean = 1.5, stddev = 2.5
+res = 0.5 * np.random.randn(100)       # Generate 100 residual terms
+y = 2 + 0.3 * X + res                  # Actual values of Y
+
+# Create pandas dataframe to store our X and y values
+df = pd.DataFrame(
+    {'X': X,
+     'y': y}
+)
+
+# Show the first five rows of our dataframe
+df.head()
+```
+
+```{python}
+# Calculate the mean of X and y
+xmean = np.mean(X)
+ymean = np.mean(y)
+
+# Calculate the terms needed for the numerator and denominator of beta
+df['xycov'] = (df['X'] - xmean) * (df['y'] - ymean)
+df['xvar'] = (df['X'] - xmean)**2
+
+# Calculate beta and alpha
+beta = df['xycov'].sum() / df['xvar'].sum()
+alpha = ymean - (beta * xmean)
+print(f'alpha = {alpha}')
+print(f'beta = {beta}')
+```
+
+```{python}
+ypred = alpha + beta * X
+
+# Plot regression against actual data
+plt.figure(figsize=(12, 6))
+plt.plot(X, ypred)     # regression line
+plt.plot(X, y, 'ro')   # scatter plot showing actual data
+plt.title('Actual vs Predicted')
+plt.xlabel('X')
+plt.ylabel('y')
+
+plt.show()
+```
+
+```{python}
+# Import and display first five rows of advertising dataset
+advert = pd.read_csv('advertising.csv')
+advert.head(5)
+```
+
+```{python}
+import statsmodels.formula.api as smf
+
+# Initialise and fit linear regression model using `statsmodels`
+model = smf.ols('Sales ~ TV', data=advert)
+model = model.fit()
+
+
+# Predict values
+sales_pred = model.predict()
+
+# Plot regression against actual data
+plt.figure(figsize=(12, 6))
+plt.plot(advert['TV'], advert['Sales'], 'o')           # scatter plot showing actual data
+plt.plot(advert['TV'], sales_pred, 'r', linewidth=2)   # regression line
+plt.xlabel('TV Advertising Costs')
+plt.ylabel('Sales')
+plt.title('TV vs Sales')
+
+plt.show()
+```
+
+```{python}
+new_X = 400
+model.predict({"TV": new_X})
+```
+
+```{python}
+from sklearn.linear_model import LinearRegression
+
+# Build linear regression model using TV and Radio as predictors
+# Split data into predictors X and output Y
+predictors = ['TV', 'Radio']
+X = advert[predictors]
+y = advert['Sales']
+
+# Initialise and fit model
+lm = LinearRegression()
+model = lm.fit(X, y)
+
+print(f'alpha = {model.intercept_}')
+print(f'betas = {model.coef_}')
+model.predict(X)
+
+new_X = [[300, 200]]
+print(model.predict(new_X))
+```
 
 ## What is Non-Linear Regression?
 
-## Formula (if needed)
+Nonlinear regression is used when the relationship between variables is not linear and cannot be accurately represented by a straight line.
 
-## Application on \### Dataset of Regression in Machine Learning
+### Formula
 
-## Conslusion
+The formula for a simple nonlinear regression can vary depending on the chosen model. Let's consider a simple polynomial regression:
+
+$$
+Y = \beta_0 + \beta_1 X + \beta_2 X^2
+$$
+
+where:
+
+-   $Y$ is the dependent variable.
+
+-   $X$ is the independent variable.
+
+-   $\beta_0$​ is the intercept.
+
+-   $\beta_1$​ is the coefficient for the linear term.
+
+-   $\beta_2$​ is the coefficient for the quadratic term.
+
+### Python Implementation
+
+```{python}
+
+```
+
+## Conclusion

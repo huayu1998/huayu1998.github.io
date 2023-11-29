@@ -16,9 +16,46 @@ The Classification algorithm, as a [Supervised Learning](https://en.wikipedia.or
 
 In simpler terms, classification serves as a form of pattern recognition, wherein classification algorithms analyze training data to identify similar patterns in new datasets.
 
-## Types of Classification Algorithms
+## Application of Classification in Machine Learning
 
 Various classification methods can be employed depending on the characteristics of the dataset under consideration. This variability stems from the extensive nature of the study of classification in statistics. Below lists the top five machine learning algorithms.
+
+## Python Libraries
+
+Before we dive into classification algorithms, we need to set up our environment. We'll be using the following Python libraries:
+
+-   **`scikit-learn`**: This library provides a wide range of tools for building machine learning models.
+
+-   **`matplotlib`** and **`seaborn`**: These libraries will help us create visualizations.
+
+## Dataset Selection
+
+For this demonstration, we will use the famous Iris dataset, which contains samples of three different species of iris flowers. The goal is to classify each sample into one of these species.
+
+```{python}
+from sklearn.datasets import load_iris
+
+data = load_iris()
+X = data.data
+y = data.target
+```
+
+## Visualizing the Data
+
+```{python}
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.scatterplot(x=X[:, 0], y=X[:, 1], hue=data.target_names[y])
+plt.xlabel(data.feature_names[0])
+plt.ylabel(data.feature_names[1])
+plt.title("Iris Dataset: Sepal Length vs Sepal Width")
+plt.show()
+```
+
+This plot shows the separation of iris flowers based on their sepal length and sepal width.
+
+## Classification Algorithms
 
 ### 1. Naive Bayes
 
@@ -44,19 +81,64 @@ Where,
 
 -   $P(x)$ is the prior probability of the *predictor*.
 
-#### 1.2 Applications of **Naive Bayes Algorithms**
+```{python}
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize the Gaussian Naive Bayes classifier
+naive_bayes_classifier = GaussianNB()
+
+# Train the classifier
+naive_bayes_classifier.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = naive_bayes_classifier.predict(X_test)
+
+# Evaluate the classifier's performance
+accuracy = accuracy_score(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, y_pred)
+classification_rep = classification_report(y_test, y_pred)
+
+# Display results
+print(f'Accuracy: {accuracy:.2f}\n')
+print('Confusion Matrix:')
+print(conf_matrix)
+print('\nClassification Report:')
+print(classification_rep)
+
+# Visualize the decision boundary (2D projection for simplicity)
+plt.figure(figsize=(8, 6))
+
+# Plot training points
+for i, c in zip(range(3), ['red', 'green', 'blue']):
+    plt.scatter(X_train[y_train == i, 0], X_train[y_train == i, 1], c=c, label=f'Class {i}', edgecolors='k')
+
+# Plot testing points
+for i, c in zip(range(3), ['red', 'green', 'blue']):
+    plt.scatter(X_test[y_test == i, 0], X_test[y_test == i, 1], c=c, marker='x', s=150, linewidth=2)
+
+plt.title('Naive Bayes Classifier - Iris Dataset')
+plt.xlabel('Feature 1')
+plt.ylabel('Feature 2')
+plt.legend()
+plt.show()
+```
 
 ### 2. Logistic Regression
+
+```{python}
+
+```
 
 ### 3. **K-Nearest Neighbors (KNN)**
 
 ### 4. Support Vector Machine
 
 ### 5. Confusion Matrix
-
-## Dateset Selection
-
-## Visualizing the Data
 
 ## Conclusion
 
