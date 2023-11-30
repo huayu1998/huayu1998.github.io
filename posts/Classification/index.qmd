@@ -131,7 +131,25 @@ plt.show()
 ### 2. Logistic Regression
 
 ```{python}
+#importing libraries 
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
 
+df= pd.read_csv("Iris.csv")
+df.drop("Id",axis=1,inplace=True)    #droping id
+df.head(5)
+```
+
+```{python}
+sns.FacetGrid(df, hue="Species", height=5).map(plt.scatter, "SepalLengthCm", "SepalWidthCm").add_legend()
+```
+
+```{python}
+#let Create a pair plot of some columns 
+sns.pairplot(df.iloc[:,:],hue='Species')  # graph also  tell us about the the realationship between the two columns
 ```
 
 ### 3. **K-Nearest Neighbors (KNN)**
@@ -141,7 +159,3 @@ plt.show()
 ### 5. Confusion Matrix
 
 ## Conclusion
-
-$$
-P(E) = {n \choose k} p^k (2-p)^{n-k}
-$$
