@@ -154,8 +154,135 @@ sns.pairplot(df.iloc[:,:],hue='Species')  # graph also  tell us about the the re
 
 ### 3. **K-Nearest Neighbors (KNN)**
 
-### 4. Support Vector Machine
+```{python}
 
-### 5. Confusion Matrix
+#Importing the Libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#Reading the dataset
+loan_dataset = pd.read_csv("train_KNN_DT.csv")
+loan_dataset.head()
+```
+
+```{python}
+loan_dataset.isna().sum()
+```
+
+```{python}
+loan_dataset['Gender'] = loan_dataset['Gender'].fillna(loan_dataset['Gender'].mode().values[0])
+loan_dataset['Married'] = loan_dataset['Married'].fillna(loan_dataset['Married'].mode().values[0])
+loan_dataset['Dependents'] = loan_dataset['Dependents'].fillna(loan_dataset['Dependents'].mode().values[0])
+loan_dataset['Self_Employed'] = loan_dataset['Self_Employed'].fillna(loan_dataset['Self_Employed'].mode().values[0])
+loan_dataset['LoanAmount'] = loan_dataset['LoanAmount'].fillna(loan_dataset['LoanAmount'].mean())
+loan_dataset['Loan_Amount_Term'] = loan_dataset['Loan_Amount_Term'].fillna(loan_dataset['Loan_Amount_Term'].mode().values[0] )
+loan_dataset['Credit_History'] = loan_dataset['Credit_History'].fillna(loan_dataset['Credit_History'].mode().values[0] )
+# Drop the ID column
+loan_dataset.drop('Loan_ID', axis=1, inplace=True)
+loan_dataset.head()
+```
+
+```{python}
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn import tree
+from sklearn.metrics import accuracy_score
+```
+
+```{python}
+#Convert some object data type to int
+gender = {"Female": 0, "Male": 1}
+yes_no = {'No' : 0,'Yes' : 1}
+dependents = {'0':0,'1':1,'2':2,'3+':3}
+education = {'Not Graduate' : 0, 'Graduate' : 1}
+property = {'Semiurban' : 0, 'Urban' : 1,'Rural' : 2}
+output = {"N": 0, "Y": 1}
+
+loan_dataset['Gender'] = loan_dataset['Gender'].replace(gender)
+loan_dataset['Married'] = loan_dataset['Married'].replace(yes_no)
+loan_dataset['Dependents'] = loan_dataset['Dependents'].replace(dependents)
+loan_dataset['Education'] = loan_dataset['Education'].replace(education)
+loan_dataset['Self_Employed'] = loan_dataset['Self_Employed'].replace(yes_no)
+loan_dataset['Property_Area'] = loan_dataset['Property_Area'].replace(property)
+loan_dataset['Loan_Status'] = loan_dataset['Loan_Status'].replace(output)
+
+loan_dataset.head()
+```
+
+```{python}
+# Drop "Loan_Status" and assign it to target variable.
+y = loan_dataset.Loan_Status
+print(y)
+x = loan_dataset.drop('Loan_Status', axis=1, inplace=False)
+
+#Splitting the dataset into train and test set
+X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size = 0.25, random_state=38, stratify = y)
+```
+
+```{python}
+knn = KNeighborsClassifier(n_neighbors = 5)
+knn.fit(X_train, Y_train)
+```
+
+```{python}
+prediction_knn = knn.predict(X_test)
+print("Prediction for test set: {}".format(prediction_knn))
+print('Accuracy of the model: {:.2f}'.format(accuracy_score(Y_test, prediction_knn)*100))
+```
+
+```{python}
+#Actual value and the predicted value
+diff_knn = pd.DataFrame({'Actual value': Y_test, 'Predicted value': prediction_knn})
+diff_knn
+```
+
+```{python}
+#Confusion matrix and classification report
+from sklearn import metrics 
+from sklearn.metrics import classification_report, confusion_matrix
+con_mat = confusion_matrix(Y_test, prediction_knn)
+print(con_mat)
+
+sns.heatmap(con_mat, annot=True, fmt="d")
+plt.title('Confusion Matrix for KNN')
+plt.xlabel('Predicted')
+plt.ylabel('True')
+
+print(classification_report(Y_test, prediction_knn))
+```
+
+### 4. Decision Tree
+
+```{python}
+dTree = tree.DecisionTreeClassifier()
+dTree.fit(X_train, Y_train)
+```
+
+```{python}
+prediction_dt = dTree.predict(X_test)
+print("Prediction for test set: {}".format(prediction_dt))
+print('Accuracy of the model: {:.2f}'.format(accuracy_score(Y_test, prediction_dt)*100))
+```
+
+```{python}
+#Actual value and the predicted value
+diff_dt = pd.DataFrame({'Actual value': Y_test, 'Predicted value': prediction_dt})
+diff_dt
+```
+
+```{python}
+#Confusion matrix and classification report
+con_mat = confusion_matrix(Y_test, prediction_dt)
+print(con_mat)
+
+sns.heatmap(con_mat, annot=True, fmt="d")
+plt.title('Confusion Matrix for Decision Tree')
+plt.xlabel('Predicted')
+plt.ylabel('True')
+
+print(classification_report(Y_test, prediction_dt))
+```
 
 ## Conclusion
