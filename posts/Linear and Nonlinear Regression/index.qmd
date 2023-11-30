@@ -168,11 +168,66 @@ where:
 ### Python Implementation
 
 ```{python}
+# Import the libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
 
+# get the dataset
+dataset = pd.read_csv('Position_Salaries.csv')
+# View the dataset
+dataset.head(5)
 ```
 
 ```{python}
+# split the data into featutes and target variable seperately
+X_l = dataset.iloc[:, 1:-1].values # features set
+y_p = dataset.iloc[:, -1].values # set of study variable
+print('Unique Level: ', X_l)
+print('Unique Salary: ', y_p)
+y_p = y_p.reshape(-1,1)
+```
 
+```{python}
+from sklearn.preprocessing import StandardScaler
+StdS_X = StandardScaler()
+StdS_y = StandardScaler()
+X_l = StdS_X.fit_transform(X_l)
+y_p = StdS_y.fit_transform(y_p)
+```
+
+```{python}
+plt.scatter(X_l, y_p, color = 'red') # plotting the training set
+plt.title('Scatter Plot') # adding a tittle to our plot
+plt.xlabel('Levels') # adds a label to the x-axis
+plt.ylabel('Salary') # adds a label to the y-axis
+plt.show()
+```
+
+```{python}
+# import the model
+from sklearn.svm import SVR
+# create the model object
+regressor = SVR(kernel = 'rbf')
+# fit the model on the data
+regressor.fit(X_l, y_p)
+# Make a prediction
+A=regressor.predict(StdS_X.transform([[6.5]]))
+print(A)
+```
+
+```{python}
+# inverse the transformation to go back to the initial scale
+plt.scatter(StdS_X.inverse_transform(X_l), StdS_y.inverse_transform(y_p), color = 'red')
+plt.plot(StdS_X.inverse_transform(X_l), StdS_y.inverse_transform(regressor.predict(X_l).reshape(-1,1)), color = 'blue')
+# add the title to the plot
+plt.title('Support Vector Regression Model')
+# label x axis
+plt.xlabel('Position')
+# label y axis
+plt.ylabel('Salary Level')
+# print the plot
+plt.show()
 ```
 
 ## Conclusion
