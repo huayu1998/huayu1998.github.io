@@ -10,12 +10,156 @@ Image from the source: [Outlier Detection and Anomaly Detection with Machine Lea
 
 # Exploring Anomaly Outlier Detection in Machine Learning with Python
 
-## What is Anomaly Matrix?
-
-## What is Outlier Matrix?
-
-## Formula (if needed)
+## What is Anomaly/Outlier Matrix?
 
 ## Application on \### Dataset of Anomaly/Outlier Matrix in Machine Learning
+
+```{python}
+from sklearn.datasets import load_iris 
+df = load_iris(as_frame=True).frame 
+df.head(5)
+```
+
+```{python}
+# Import the necessary modules 
+import numpy as np 
+import matplotlib.pyplot as plt 
+from sklearn.datasets import load_iris 
+from sklearn.neighbors import LocalOutlierFactor 
+
+# Load the datasets 
+df = load_iris(as_frame=True).frame 
+X = df[['sepal length (cm)','sepal width (cm)']] 
+
+# Define the model and set the number of neighbors 
+lof = LocalOutlierFactor(n_neighbors=5) 
+
+# Fit the model to the data 
+lof.fit(X) 
+
+# Calculate the outlier scores for each point 
+scores = lof.negative_outlier_factor_ 
+
+# Identify the points with the highest outlier scores 
+outliers = np.argwhere(scores > np.percentile(scores, 95)) 
+
+# Plot anomly 
+colors=['green','red'] 
+
+for i in range(len(X)): 
+	if i not in outliers: 
+		plt.scatter(X.iloc[i,0], X.iloc[i,1], color=colors[0]) # Not anomly 
+	else: 
+		plt.scatter(X.iloc[i,0], X.iloc[i,1], color=colors[1]) # anomly 
+plt.xlabel('sepal length (cm)',fontsize=13) 
+plt.ylabel('sepal width (cm)',fontsize=13)		 
+plt.title('Anomly by Local Outlier Factor',fontsize=16)		 
+plt.show() 
+```
+
+```{python}
+# Import the necessary modules 
+import numpy as np 
+import matplotlib.pyplot as plt 
+from sklearn.datasets import load_iris 
+from sklearn.ensemble import IsolationForest 
+
+df = load_iris(as_frame=True).frame 
+X = df[['sepal length (cm)','sepal width (cm)']] 
+
+# Define the model and set the contamination level 
+model = IsolationForest(contamination=0.05) 
+
+# Fit the model to the data 
+model.fit(X) 
+
+# Calculate the outlier scores for each point 
+scores = model.decision_function(X) 
+
+# Identify the points with the highest outlier scores 
+outliers = np.argwhere(scores < np.percentile(scores, 5)) 
+
+# Plot anomly 
+colors=['green','red'] 
+
+for i in range(len(X)): 
+	if i not in outliers: 
+		plt.scatter(X.iloc[i,0], X.iloc[i,1], color=colors[0]) # Not anomly 
+	else: 
+		plt.scatter(X.iloc[i,0], X.iloc[i,1], color=colors[1]) # anomly 
+plt.xlabel('sepal length (cm)',fontsize=13) 
+plt.ylabel('sepal width (cm)',fontsize=13)		 
+plt.title('Anomly by Isolation Forest',fontsize=16)		 
+plt.show()
+```
+
+```{python}
+# Import the necessary modules 
+import numpy as np 
+import matplotlib.pyplot as plt 
+from sklearn.datasets import load_iris 
+from sklearn.covariance import EllipticEnvelope 
+
+df = load_iris(as_frame=True).frame 
+X = df[['sepal length (cm)','sepal width (cm)']] 
+
+# Define the model and set the contamination level 
+model = EllipticEnvelope(contamination=0.05) 
+
+# Fit the model to the data 
+model.fit(X) 
+
+# Calculate the outlier scores for each point 
+scores = model.decision_function(X) 
+
+# Identify the points with the highest outlier scores 
+outliers = np.argwhere(scores < np.percentile(scores, 5)) 
+
+# Plot anomly 
+colors=['green','red'] 
+
+for i in range(len(X)): 
+	if i not in outliers: 
+		plt.scatter(X.iloc[i,0], X.iloc[i,1], color=colors[0]) # Not anomly 
+	else: 
+		plt.scatter(X.iloc[i,0], X.iloc[i,1], color=colors[1]) # anomly 
+plt.xlabel('sepal length (cm)',fontsize=13) 
+plt.ylabel('sepal width (cm)',fontsize=13)		 
+plt.title('Anomly by Elliptic Envelope',fontsize=16)		 
+plt.show()
+```
+
+```{python}
+import numpy as np
+from sklearn.datasets import make_blobs
+from sklearn.cluster import DBSCAN
+
+# Generate the data
+X, y = make_blobs(n_samples=1000, centers=1, cluster_std=4, random_state=123)
+
+# Define the DBSCAN parameters
+eps = 3
+min_samples = 5
+
+# Create the DBSCAN model
+dbscan = DBSCAN(eps=eps, min_samples=min_samples)
+
+# Fit the model to the data
+dbscan.fit(X)
+
+# Get the labels of the data points
+labels = dbscan.labels_
+
+# Identify the outliers
+outliers = np.where(labels == -1)[0]
+
+# Print the number of outliers
+print("Number of outliers:", len(outliers))
+
+# Plot the data with the outliers highlighted
+plt.scatter(X[:, 0], X[:, 1], c=labels)
+plt.scatter(X[outliers, 0], X[outliers, 1], c="red", marker="x")
+plt.show()
+```
 
 ## Conclusion
