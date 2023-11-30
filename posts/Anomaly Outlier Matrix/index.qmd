@@ -8,17 +8,61 @@ image: "matrix.png"
 
 Image from the source: [Outlier Detection and Anomaly Detection with Machine Learning](https://medium.com/@mehulved1503/outlier-detection-and-anomaly-detection-with-machine-learning-caa96b34b7f6)
 
-# Exploring Anomaly Outlier Detection in Machine Learning with Python
+# Exploring Anomaly/Outlier Detection in Machine Learning with Python
 
-## What is Anomaly/Outlier Matrix?
+## What is Anomaly Detection?
 
-## Application on \### Dataset of Anomaly/Outlier Matrix in Machine Learning
+Anomaly detection, also known as outlier detection, refers to the process of identifying patterns or instances that deviate significantly from the norm in a dataset. Anomalies are observations that do not conform to expected behavior and may indicate unusual events, errors, or outliers in the data. Anomaly detection is applied in various fields such as finance, cybersecurity, manufacturing, and healthcare.
+
+There are several approaches and algorithms used for anomaly detection:
+
+1.  **Statistical Methods:**
+
+    -   **Z-Score:** This method measures the number of standard deviations a data point is from the mean. Points with a high Z-score are considered anomalies.
+
+    -   **IQR (Interquartile Range):** This method defines a range based on the interquartile range and flags points outside this range as anomalies.
+
+2.  **Machine Learning Algorithms:**
+
+    -   **Isolation Forest:** This algorithm builds an ensemble of isolation trees to isolate anomalies. It works by randomly selecting a feature and then randomly selecting a split value between the minimum and maximum values of the selected feature.
+
+    -   **One-Class SVM (Support Vector Machine):** This algorithm is trained on normal instances and aims to find a hyperplane that separates the normal instances from the outliers.
+
+    -   **Local Outlier Factor (LOF**): is an anomaly detection algorithm that assesses the local density deviation of data points in a dataset. LOF works on the principle that anomalies are often characterized by having a significantly lower local density compared to their neighbors.
+
+    -   **Autoencoders:** These are neural network models that learn to encode input data into a lower-dimensional representation and then decode it back to the original data. Anomalies may have higher reconstruction errors.
+
+3.  **Clustering Methods:**
+
+    -   **DBSCAN (Density-Based Spatial Clustering of Applications with Noise):** This algorithm groups together data points that are close to each other and identifies points that are in sparser regions as anomalies.
+
+    -   **K-Means Clustering:** Anomalies may be detected by looking at instances that do not belong to any cluster or are in small clusters.
+
+and so on...
+
+## Comparing Anomaly Detection algorithms for outlier detection on Iris dataset
+
+Below displays the top five rows of the iris dataset from the Scikit Learn which containing the following features:
+
+-   sepal length (cm)
+
+-   sepal width (cm)
+
+-   petal length (cm)
+
+-   petal width (cm)
+
+-   target
 
 ```{python}
 from sklearn.datasets import load_iris 
 df = load_iris(as_frame=True).frame 
 df.head(5)
 ```
+
+Next, the following provides various examples of anomaly detection algorithms
+
+### **1. Local Outlier Factor (LOF)**
 
 ```{python}
 # Import the necessary modules 
@@ -57,6 +101,8 @@ plt.title('Anomly by Local Outlier Factor',fontsize=16)
 plt.show() 
 ```
 
+### 2. Isolation Forest
+
 ```{python}
 # Import the necessary modules 
 import numpy as np 
@@ -93,18 +139,20 @@ plt.title('Anomly by Isolation Forest',fontsize=16)
 plt.show()
 ```
 
+### 3. One-class Support Vector Machines (SVMs):
+
 ```{python}
 # Import the necessary modules 
 import numpy as np 
 import matplotlib.pyplot as plt 
 from sklearn.datasets import load_iris 
-from sklearn.covariance import EllipticEnvelope 
+from sklearn import svm 
 
 df = load_iris(as_frame=True).frame 
 X = df[['sepal length (cm)','sepal width (cm)']] 
 
-# Define the model and set the contamination level 
-model = EllipticEnvelope(contamination=0.05) 
+# Define the model and set the nu parameter 
+model = svm.OneClassSVM(nu=0.05) 
 
 # Fit the model to the data 
 model.fit(X) 
@@ -125,9 +173,13 @@ for i in range(len(X)):
 		plt.scatter(X.iloc[i,0], X.iloc[i,1], color=colors[1]) # anomly 
 plt.xlabel('sepal length (cm)',fontsize=13) 
 plt.ylabel('sepal width (cm)',fontsize=13)		 
-plt.title('Anomly by Elliptic Envelope',fontsize=16)		 
+plt.title('Anomly by One-class Support Vector Machines',fontsize=16)		 
 plt.show()
 ```
+
+## Other Example: DBSCAN for Outlier Detection and Marking Outliers
+
+Let's explore another example of using DBSCAN to label outliers and we will also mark them with Matplotlib in a scatter plot:
 
 ```{python}
 import numpy as np
@@ -163,3 +215,5 @@ plt.show()
 ```
 
 ## Conclusion
+
+Anomaly detection is a critical task in various fields, including fraud detection, network security, and quality control. You can experiment with different datasets, explore other anomaly detection algorithms like K-Means Clustering, Z-score (statistic), and Autoencoders, and adjust threshold values to adapt to specific use cases.
