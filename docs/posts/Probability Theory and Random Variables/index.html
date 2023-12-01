@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The coin landed on: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The coin landed on: Heads</code></pre>
+<pre><code>The coin landed on: Tails</code></pre>
 </div>
 </div>
 </section>
@@ -359,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The die rolling result: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The die rolling result: 4</code></pre>
+<pre><code>The die rolling result: 6</code></pre>
 </div>
 </div>
 </section>
@@ -389,7 +389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-5-output-1.png" width="601" height="449"></p>
+<p><img src="index_files/figure-html/cell-5-output-1.png" width="602" height="449"></p>
 </div>
 </div>
 <p>This bar chart shows the probability distribution of a fair six-sided die’s outcomes over 1000 rolls.</p>
@@ -417,7 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>plt.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train)</span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">'off'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="45">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>(-4.058631209647063, 4.117395258804836, -4.309480492130218, 5.167561533094499)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -597,6 +597,8 @@ P(Y=1 | x_i) = \frac{1}{1+exp(A*f(x_i)+B)}
 <p>This plot is more interesting.</p>
 <p>In the blue we have the calibration curve for the original <code>GaussianNB</code> classifier.</p>
 <p>Displayed in yellow is the recalibrated curve generated using a Platt correction. Surprisingly, the Platt correction, in this case, had a detrimental impact rather than being beneficial. Upon examining the original calibration curves for different algorithms, it becomes apparent that <code>GaussianNB</code> did not exhibit the same sigmoidal error structure as <code>SVC</code> and <code>RandomForest</code> in the dataset used for this example. Specifically, GaussianNB showed a tendency to undershoot the high-probability data by too much and undershoot the low probabilities by too little. Platt calibration is effective when biases on both sides are roughly equivalent, and unexpectedly, it did not perform well in this scenario.</p>
+<p><br>
+On the contrary, isotonic calibration proves to be highly effective. In this case, the adjusted probabilities using isotonic calibration, indicated in red, closely align with the true mean probabilities.</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
@@ -1308,11 +1310,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a>Displayed in yellow is the recalibrated curve generated using a Platt correction. Surprisingly, the Platt correction, in this case, had a detrimental impact rather than being beneficial. Upon examining the original calibration curves for different algorithms, it becomes apparent that <span class="in">`GaussianNB`</span> did not exhibit the same sigmoidal error structure as <span class="in">`SVC`</span> and <span class="in">`RandomForest`</span> in the dataset used for this example. Specifically, GaussianNB showed a tendency to undershoot the high-probability data by too much and undershoot the low probabilities by too little. Platt calibration is effective when biases on both sides are roughly equivalent, and unexpectedly, it did not perform well in this scenario.</span>
 <span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
-<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a>Probability theory and random variables are foundational concepts in machine learning that help us deal with uncertainty and randomness. In this blog post, we explored these concepts through simple simulations of coin tosses and dice rolls in Python as well as providing application of Probability Theory in Machine Learning using Probability Calibration Curves example. Visualizations played a crucial role in understanding the probability distributions of these experiments.</span>
-<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a>Understanding probability theory and random variables is essential for various machine learning algorithms, such as Bayesian networks, decision trees, and more. Experiment with different simulations and visualizations to deepen your grasp of these concepts.</span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a>On the contrary, isotonic calibration proves to be highly effective. In this case, the adjusted probabilities using isotonic calibration, indicated in red, closely align with the true mean probabilities.</span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a>Probability theory and random variables are foundational concepts in machine learning that help us deal with uncertainty and randomness. In this blog post, we explored these concepts through simple simulations of coin tosses and dice rolls in Python as well as providing application of Probability Theory in Machine Learning using Probability Calibration Curves example. Visualizations played a crucial role in understanding the probability distributions of these experiments.</span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a>Understanding probability theory and random variables is essential for various machine learning algorithms, such as Bayesian networks, decision trees, and more. Experiment with different simulations and visualizations to deepen your grasp of these concepts.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -284,6 +284,9 @@ In the blue we have the calibration curve for the original `GaussianNB` classifi
 
 Displayed in yellow is the recalibrated curve generated using a Platt correction. Surprisingly, the Platt correction, in this case, had a detrimental impact rather than being beneficial. Upon examining the original calibration curves for different algorithms, it becomes apparent that `GaussianNB` did not exhibit the same sigmoidal error structure as `SVC` and `RandomForest` in the dataset used for this example. Specifically, GaussianNB showed a tendency to undershoot the high-probability data by too much and undershoot the low probabilities by too little. Platt calibration is effective when biases on both sides are roughly equivalent, and unexpectedly, it did not perform well in this scenario.
 
+\
+On the contrary, isotonic calibration proves to be highly effective. In this case, the adjusted probabilities using isotonic calibration, indicated in red, closely align with the true mean probabilities.
+
 ## Conclusion
 
 Probability theory and random variables are foundational concepts in machine learning that help us deal with uncertainty and randomness. In this blog post, we explored these concepts through simple simulations of coin tosses and dice rolls in Python as well as providing application of Probability Theory in Machine Learning using Probability Calibration Curves example. Visualizations played a crucial role in understanding the probability distributions of these experiments.

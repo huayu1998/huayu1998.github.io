@@ -18,9 +18,29 @@ The process involves organizing data points into clusters by considering certain
 
 ## Application of Clustering in Machine Learning
 
-### K-Means Clustering
+### 1. K-Means Clustering
 
 K-Means is a partitioning clustering algorithm that divides data into K clusters. It works by minimizing the sum of squared distances between data points and their respective cluster centers.
+
+#### 1.1 How does the K-NN work (detailed step)?
+
+The [K-NN](https://www.javatpoint.com/k-nearest-neighbor-algorithm-for-machine-learning) working can be explained on the basis of the below algorithm:
+
+![](KNN_Clustering.png)
+
+-   **Step-1:** Select the number K of the neighbors
+
+-   **Step-2:** Calculate the Euclidean distance of **K number of neighbors**
+
+-   **Step-3:** Take the K nearest neighbors as per the calculated Euclidean distance.
+
+-   **Step-4:** Among these k neighbors, count the number of the data points in each category.
+
+-   **Step-5:** Assign the new data points to that category for which the number of the neighbor is maximum.
+
+-   **Step-6:** Our model is ready.
+
+#### 1.2 K-NN Implementation on Random Created Dataset
 
 ```{python}
 from sklearn.cluster import KMeans
@@ -45,9 +65,25 @@ plt.show()
 
 This visualization demonstrates K-Means clustering in action, with data points grouped into three clusters, and cluster centers shown in red.
 
-### **Hierarchical Clustering**
+### **2. Hierarchical Clustering**
 
 Hierarchical clustering builds a tree-like hierarchy of clusters. It can be represented as a dendrogram, which shows the relationships between data points and clusters at different levels.
+
+#### 2.1 How does the Hierarchical Clustering work (detailed step)?
+
+[Hierarchical clustering](https://www.learndatasci.com/glossary/hierarchical-clustering/) utilizes a metric of distance or similarity to form new clusters. The steps for Agglomerative clustering can be succinctly outlined as follows:
+
+-   **Step-1**: Compute the proximity matrix using a particular distance metric
+
+-   **Step-2**: Each data point is assigned to a cluster
+
+-   **Step-3**: Merge the clusters based on a metric for the similarity between clusters
+
+-   **Step-4**: Update the distance matrix
+
+-   **Step-5**: Repeat Step 3 and Step 4 until only a single cluster remains
+
+#### 2.2 Hierarchical Clustering Implementation on Random Created Dataset
 
 ```{python}
 from scipy.cluster.hierarchy import dendrogram, linkage
@@ -68,7 +104,17 @@ plt.show()
 
 This dendrogram visualizes the hierarchical clustering of sample data, showing the relationships between data points and clusters.
 
-### DBSCAN labels for the Scatter Plot
+### 3. DBSCAN Clustering
+
+#### 3.1 How does DBSCAN work (detailed step)?
+
+-   **Step-1**: The algorithm proceeds by arbitrarily picking up a point in the dataset (until all points have been visited).
+
+-   **Step-2**: If there are at least 'minPoint' points within a radius of '$ε$' to the point then we consider all these points to be part of the same cluster.
+
+-   **Step-3**: The clusters are then expanded by recursively repeating the neighborhood calculation for each neighboring point
+
+#### 3.2 DBSCAN Implementation on Random Created Dataset
 
 ```{python}
 import numpy as np
