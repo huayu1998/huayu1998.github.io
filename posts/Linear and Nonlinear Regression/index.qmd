@@ -16,7 +16,7 @@ Regression is a vital concept in machine learning that helps us model relationsh
 
 Linear regression is a straightforward approach for modeling the relationship between a dependent variable $(Y)$ and one or more independent variables $(X)$.
 
-### Formula
+### 1. Formula
 
 The formula for simple linear regression is:
 
@@ -34,7 +34,9 @@ where:
 
 -   $\beta_1$​ is the slope.
 
-### Python Implementation
+### 2. Python Implementation
+
+To get started, let's simulate some data and look at how the predicted values $(Y_e)$ differ from the actual value $(Y)$
 
 ```{python}
 import pandas as pd
@@ -57,6 +59,8 @@ df = pd.DataFrame(
 df.head()
 ```
 
+Now, we can have an estimate for `alpha` and `beta`, therefore our model can be written as $(Y_e) = 2.003 + 0.323X$*,*​ and then we can make predictions:
+
 ```{python}
 # Calculate the mean of X and y
 xmean = np.mean(X)
@@ -73,6 +77,8 @@ print(f'alpha = {alpha}')
 print(f'beta = {beta}')
 ```
 
+We can create a plot (shown below) by comparing our predicted values `ypred`with the actual values of `y` to gain a clearer visual insight into our model's performance.
+
 ```{python}
 ypred = alpha + beta * X
 
@@ -87,11 +93,17 @@ plt.ylabel('y')
 plt.show()
 ```
 
+### 3. Linear Regression on the Real (advertising) Dataset
+
+Below is the preview of the "[advertising.csv](https://www.kaggle.com/search?q=advertising+dataset)" dataset
+
 ```{python}
 # Import and display first five rows of advertising dataset
 advert = pd.read_csv('advertising.csv')
 advert.head(5)
 ```
+
+Now we can visualise our regression model by plotting `sales_pred` against the TV advertising costs to find the best fit line:
 
 ```{python}
 import statsmodels.formula.api as smf
@@ -115,37 +127,19 @@ plt.title('TV vs Sales')
 plt.show()
 ```
 
+\
+With this model, we can make sales predictions for any given expenditure on TV advertising. For instance, in the scenario of raising TV advertising expenses to \$500, our prediction indicates that sales would increase to \~35 units.
+
 ```{python}
-new_X = 400
+new_X = 500
 model.predict({"TV": new_X})
-```
-
-```{python}
-from sklearn.linear_model import LinearRegression
-
-# Build linear regression model using TV and Radio as predictors
-# Split data into predictors X and output Y
-predictors = ['TV', 'Radio']
-X = advert[predictors]
-y = advert['Sales']
-
-# Initialise and fit model
-lm = LinearRegression()
-model = lm.fit(X, y)
-
-print(f'alpha = {model.intercept_}')
-print(f'betas = {model.coef_}')
-model.predict(X)
-
-new_X = [[300, 200]]
-print(model.predict(new_X))
 ```
 
 ## What is Non-Linear Regression?
 
 Nonlinear regression is used when the relationship between variables is not linear and cannot be accurately represented by a straight line.
 
-### Formula
+### 1. Formula
 
 The formula for a simple nonlinear regression can vary depending on the chosen model. Let's consider a simple polynomial regression:
 
@@ -165,7 +159,9 @@ where:
 
 -   $\beta_2$​ is the coefficient for the quadratic term.
 
-### Python Implementation
+### 2. Non-Linear Regression on the Real (Position vs. Salaries) Dataset
+
+Below is the preview of the "[Position_Salaries.csv](https://github.com/BejaminNaibei/dataset/blob/main/Position_Salaries.csv)" dataset
 
 ```{python}
 # Import the libraries
@@ -179,6 +175,8 @@ dataset = pd.read_csv('Position_Salaries.csv')
 dataset.head(5)
 ```
 
+Unique Level & Salary of the features in the dataset:
+
 ```{python}
 # split the data into featutes and target variable seperately
 X_l = dataset.iloc[:, 1:-1].values # features set
@@ -187,6 +185,10 @@ print('Unique Level: ', X_l)
 print('Unique Salary: ', y_p)
 y_p = y_p.reshape(-1,1)
 ```
+
+Our data is prepared for the implementation of our SVR model.
+
+Nevertheless, before proceeding, we will initially visualize the data to understand the characteristics of the SVR model that aligns best with it. Let's generate a scatter plot for our two variables.
 
 ```{python}
 from sklearn.preprocessing import StandardScaler
@@ -204,6 +206,12 @@ plt.ylabel('Salary') # adds a label to the y-axis
 plt.show()
 ```
 
+To implement our model, the first step involves importing it from scikit-learn and creating an object for it.
+
+Given that we have specified our data as non-linear, we will employ a kernel known as the Radial Basis Function (RBF) kernel.
+
+Once the kernel function is declared, we proceed to fit our data onto the object. The subsequent program executes these steps:
+
 ```{python}
 # import the model
 from sklearn.svm import SVR
@@ -215,6 +223,8 @@ regressor.fit(X_l, y_p)
 A=regressor.predict(StdS_X.transform([[6.5]]))
 print(A)
 ```
+
+Now that we have learned how to implement the SVR model and make predictions, the last step is to visualize our model.
 
 ```{python}
 # inverse the transformation to go back to the initial scale
@@ -231,3 +241,7 @@ plt.show()
 ```
 
 ## Conclusion
+
+In this blog post, we explored both linear and nonlinear regression in machine learning. We discussed the mathematical formulas, provided Python implementations, and visualized the results using synthetic data. Linear regression is suitable for modeling linear relationships, while nonlinear regression, as demonstrated through polynomial regression, can capture more complex patterns in the data.
+
+Understanding these regression techniques is essential for modeling and predicting relationships in various fields, including economics, biology, and engineering.
