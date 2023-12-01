@@ -1,5 +1,5 @@
 ---
-title: "Anomaly/Outlier Matrix"
+title: "Anomaly/Outlier Detection"
 author: "Huayu Liang"
 date: "now"
 categories: [ML, visualization, matrix]
