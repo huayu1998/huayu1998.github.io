@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Huayu Liang">
-<meta name="dcterms.date" content="2023-11-29">
+<meta name="dcterms.date" content="2023-11-30">
 
 <title>Huayu Liang - Anomaly/Outlier Matrix</title>
 <style>
@@ -195,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 29, 2023</p>
+        <p class="date">November 30, 2023</p>
       </div>
     </div>
     
@@ -329,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> load_iris(as_frame<span class="op">=</span><span class="va">True</span>).frame </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="73">
 <div>
 
 
@@ -391,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Next, the following provides various examples of anomaly detection algorithms</p>
+<p>Next, the following provides various visualization examples using different anomaly detection algorithms</p>
 <section id="local-outlier-factor-lof" class="level3">
 <h3 class="anchored" data-anchor-id="local-outlier-factor-lof"><strong>1. Local Outlier Factor (LOF)</strong></h3>
 <div class="cell" data-execution_count="2">
@@ -420,7 +420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>outliers <span class="op">=</span> np.argwhere(scores <span class="op">&gt;</span> np.percentile(scores, <span class="dv">95</span>)) </span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot anomly </span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'green'</span>,<span class="st">'red'</span>] </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'maroon'</span>,<span class="st">'orange'</span>] </span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(X)): </span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> outliers: </span>
@@ -464,7 +464,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>outliers <span class="op">=</span> np.argwhere(scores <span class="op">&lt;</span> np.percentile(scores, <span class="dv">5</span>)) </span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot anomly </span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'green'</span>,<span class="st">'red'</span>] </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'maroon'</span>,<span class="st">'orange'</span>] </span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(X)): </span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> outliers: </span>
@@ -508,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>outliers <span class="op">=</span> np.argwhere(scores <span class="op">&lt;</span> np.percentile(scores, <span class="dv">5</span>)) </span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot anomly </span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'green'</span>,<span class="st">'red'</span>] </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'maroon'</span>,<span class="st">'orange'</span>] </span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(X)): </span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> outliers: </span>
@@ -573,6 +573,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In this blog post, we explored anomaly detection in machine learning using different algorithm approaches such as LOF, Isolation Forest, and one-class SVM on the Iris dataset. Beside we also explore the DBSCAN for outlier detection in scatter plot.</p>
 <p>Anomaly detection is a critical task in various fields, including fraud detection, network security, and quality control. You can experiment with different datasets, explore other anomaly detection algorithms like K-Means Clustering, Z-score (statistic), and Autoencoders, and adjust threshold values to adapt to specific use cases.</p>
 
 
@@ -1055,7 +1056,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span>
 <span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>Next, the following provides various examples of anomaly detection algorithms</span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>Next, the following provides various visualization examples using different anomaly detection algorithms</span>
 <span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a><span class="fu">### **1. Local Outlier Factor (LOF)**</span></span>
 <span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a></span>
@@ -1083,7 +1084,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>outliers <span class="op">=</span> np.argwhere(scores <span class="op">&gt;</span> np.percentile(scores, <span class="dv">95</span>)) </span>
 <span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot anomly </span></span>
-<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'green'</span>,<span class="st">'red'</span>] </span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'maroon'</span>,<span class="st">'orange'</span>] </span>
 <span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(X)): </span>
 <span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> outliers: </span>
@@ -1121,7 +1122,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>outliers <span class="op">=</span> np.argwhere(scores <span class="op">&lt;</span> np.percentile(scores, <span class="dv">5</span>)) </span>
 <span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot anomly </span></span>
-<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'green'</span>,<span class="st">'red'</span>] </span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'maroon'</span>,<span class="st">'orange'</span>] </span>
 <span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(X)): </span>
 <span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> outliers: </span>
@@ -1159,7 +1160,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a>outliers <span class="op">=</span> np.argwhere(scores <span class="op">&lt;</span> np.percentile(scores, <span class="dv">5</span>)) </span>
 <span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot anomly </span></span>
-<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'green'</span>,<span class="st">'red'</span>] </span>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>colors<span class="op">=</span>[<span class="st">'maroon'</span>,<span class="st">'orange'</span>] </span>
 <span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(X)): </span>
 <span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> outliers: </span>
@@ -1211,7 +1212,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-226"><a href="#cb7-226" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-227"><a href="#cb7-227" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
 <span id="cb7-228"><a href="#cb7-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-229"><a href="#cb7-229" aria-hidden="true" tabindex="-1"></a>Anomaly detection is a critical task in various fields, including fraud detection, network security, and quality control. You can experiment with different datasets, explore other anomaly detection algorithms like K-Means Clustering, Z-score (statistic), and Autoencoders, and adjust threshold values to adapt to specific use cases.</span>
+<span id="cb7-229"><a href="#cb7-229" aria-hidden="true" tabindex="-1"></a>In this blog post, we explored anomaly detection in machine learning using different algorithm approaches such as LOF, Isolation Forest, and one-class SVM on the Iris dataset. Beside we also explore the DBSCAN for outlier detection in scatter plot.</span>
+<span id="cb7-230"><a href="#cb7-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-231"><a href="#cb7-231" aria-hidden="true" tabindex="-1"></a>Anomaly detection is a critical task in various fields, including fraud detection, network security, and quality control. You can experiment with different datasets, explore other anomaly detection algorithms like K-Means Clustering, Z-score (statistic), and Autoencoders, and adjust threshold values to adapt to specific use cases.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

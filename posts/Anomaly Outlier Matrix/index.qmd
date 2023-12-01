@@ -60,7 +60,7 @@ df = load_iris(as_frame=True).frame
 df.head(5)
 ```
 
-Next, the following provides various examples of anomaly detection algorithms
+Next, the following provides various visualization examples using different anomaly detection algorithms
 
 ### **1. Local Outlier Factor (LOF)**
 
@@ -88,7 +88,7 @@ scores = lof.negative_outlier_factor_
 outliers = np.argwhere(scores > np.percentile(scores, 95)) 
 
 # Plot anomly 
-colors=['green','red'] 
+colors=['maroon','orange'] 
 
 for i in range(len(X)): 
 	if i not in outliers: 
@@ -126,7 +126,7 @@ scores = model.decision_function(X)
 outliers = np.argwhere(scores < np.percentile(scores, 5)) 
 
 # Plot anomly 
-colors=['green','red'] 
+colors=['maroon','orange'] 
 
 for i in range(len(X)): 
 	if i not in outliers: 
@@ -164,7 +164,7 @@ scores = model.decision_function(X)
 outliers = np.argwhere(scores < np.percentile(scores, 5)) 
 
 # Plot anomly 
-colors=['green','red'] 
+colors=['maroon','orange'] 
 
 for i in range(len(X)): 
 	if i not in outliers: 
@@ -215,5 +215,7 @@ plt.show()
 ```
 
 ## Conclusion
+
+In this blog post, we explored anomaly detection in machine learning using different algorithm approaches such as LOF, Isolation Forest, and one-class SVM on the Iris dataset. Beside we also explore the DBSCAN for outlier detection in scatter plot.
 
 Anomaly detection is a critical task in various fields, including fraud detection, network security, and quality control. You can experiment with different datasets, explore other anomaly detection algorithms like K-Means Clustering, Z-score (statistic), and Autoencoders, and adjust threshold values to adapt to specific use cases.
