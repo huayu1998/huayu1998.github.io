@@ -2,7 +2,7 @@
 title: "Anomaly/Outlier Detection"
 author: "Huayu Liang"
 date: "now"
-categories: [ML, visualization, matrix]
+categories: [ML, visualization, anomaly, outlier]
 image: "matrix.png"
 ---
 
