@@ -294,20 +294,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The Classification algorithm, as a <a href="https://en.wikipedia.org/wiki/Supervised_learning">Supervised Learning</a> technique, is employed to categorize new observations based on the knowledge gained from training data. In the classification process, the program utilizes a provided dataset or observations to learn how to assign new observations to distinct classes or groups, such as 0 or 1, red or blue, yes or no, spam or not spam, and so on. Terms like targets, labels, or categories are used interchangeably to denote these classes. As a supervised learning technique, the Classification algorithm requires labeled input data, encompassing both input and output information. The classification process involves transferring a discrete output function <span class="math inline">\(f(y)\)</span> to an input variable <span class="math inline">\((x)\)</span>.</p>
 <p>In simpler terms, classification serves as a form of pattern recognition, wherein classification algorithms analyze training data to identify similar patterns in new datasets.</p>
 </section>
-<section id="application-of-classification-in-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="application-of-classification-in-machine-learning">Application of Classification in Machine Learning</h2>
-<p>Various classification methods can be employed depending on the characteristics of the dataset under consideration. This variability stems from the extensive nature of the study of classification in statistics. Below lists the top five machine learning algorithms.</p>
-</section>
-<section id="python-libraries" class="level2">
-<h2 class="anchored" data-anchor-id="python-libraries">Python Libraries</h2>
-<p>Before we dive into classification algorithms, we need to set up our environment. We’ll be using the following Python libraries:</p>
+<section id="iris-dataset-visualization-in-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="iris-dataset-visualization-in-machine-learning">Iris Dataset Visualization in Machine Learning</h2>
+<section id="python-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="python-libraries">1. Python Libraries</h3>
+<p>Before we dive into classification algorithms, we need to set up our environment. We’ll be using the following (main) Python libraries:</p>
 <ul>
 <li><p><strong><code>scikit-learn</code></strong>: This library provides a wide range of tools for building machine learning models.</p></li>
 <li><p><strong><code>matplotlib</code></strong> and <strong><code>seaborn</code></strong>: These libraries will help us create visualizations.</p></li>
 </ul>
 </section>
-<section id="dataset-selection" class="level2">
-<h2 class="anchored" data-anchor-id="dataset-selection">Dataset Selection</h2>
+<section id="dataset" class="level3">
+<h3 class="anchored" data-anchor-id="dataset">2. Dataset</h3>
 <p>For this demonstration, we will use the famous Iris dataset, which contains samples of three different species of iris flowers. The goal is to classify each sample into one of these species.</p>
 <div class="cell" data-execution_count="1">
 <details>
@@ -320,8 +318,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="visualizing-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-the-data">Visualizing the Data</h2>
+<section id="visualizing-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-the-data">3. Visualizing the Data</h3>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
@@ -340,8 +338,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>This plot shows the separation of iris flowers based on their sepal length and sepal width.</p>
 </section>
-<section id="classification-algorithms" class="level2">
-<h2 class="anchored" data-anchor-id="classification-algorithms">Classification Algorithms</h2>
+</section>
+<section id="types-of-classification-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-classification-algorithms">Types of Classification Algorithms</h2>
+<p>Various classification methods can be employed depending on the characteristics of the dataset under consideration. This variability stems from the extensive nature of the study of classification in statistics. Below lists the common four machine learning algorithms.</p>
 <section id="naive-bayes" class="level3">
 <h3 class="anchored" data-anchor-id="naive-bayes">1. Naive Bayes</h3>
 <p>As a popular supervised machine learning algorithm, Naïve Bayes classifier is used for classification tasks such as text classification. It belongs to the family of generative learning algorithms, which means that it models the distribution of inputs for a given class or category. This modeling relies on the assumption that, given the class, the features of the input data are conditionally independent, facilitating swift and accurate predictions.</p>
@@ -431,10 +431,15 @@ weighted avg       1.00      1.00      1.00        30
 <p><img src="index_files/figure-html/cell-4-output-2.png" width="663" height="523"></p>
 </div>
 </div>
+<p>This visualization demonstrates Naive Bayes Classifier in action on the Iris Dataset, with data points grouped into three classes.</p>
 </section>
 </section>
 <section id="logistic-regression" class="level3">
 <h3 class="anchored" data-anchor-id="logistic-regression">2. Logistic Regression</h3>
+<p>Below are the preview of the real-world Iris dataset with the following columns:</p>
+<ul>
+<li>Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm, Species</li>
+</ul>
 <div class="cell" data-execution_count="4">
 <details>
 <summary>Code</summary>
@@ -520,6 +525,7 @@ weighted avg       1.00      1.00      1.00        30
 <p><img src="index_files/figure-html/cell-6-output-1.png" width="598" height="471"></p>
 </div>
 </div>
+<p>The plot shows the scatterplot by coloring species</p>
 <div class="cell" data-execution_count="6">
 <details>
 <summary>Code</summary>
@@ -530,9 +536,11 @@ weighted avg       1.00      1.00      1.00        30
 <p><img src="index_files/figure-html/cell-7-output-1.png" width="1093" height="947"></p>
 </div>
 </div>
+<p>The plot shows the pair plot of the Iris dataset with main column feature by species</p>
 </section>
 <section id="k-nearest-neighbors-knn" class="level3">
 <h3 class="anchored" data-anchor-id="k-nearest-neighbors-knn">3. <strong>K-Nearest Neighbors (KNN)</strong></h3>
+<p>The aim is to identify the customer segments to whom the loan can be granted using the “loan.csv” dataset, below is the preview of the top five rows of the dataset:</p>
 <div class="cell" data-execution_count="7">
 <details>
 <summary>Code</summary>
@@ -678,6 +686,22 @@ Loan_Status           0
 dtype: int64</code></pre>
 </div>
 </div>
+<section id="dataset-feature-description" class="level4">
+<h4 class="anchored" data-anchor-id="dataset-feature-description">3.1 Dataset Feature Description</h4>
+<ul>
+<li><p><strong>Loan_Id</strong>: Each applicant is assigned a unique Loan_Id for individual identification purposes.</p></li>
+<li><p><strong>Gender</strong>: This field indicates the gender of the applicant.</p></li>
+<li><p><strong>Married</strong>: This field indicates whether the applicant is currently married.</p></li>
+<li><p><strong>Dependents</strong>: This field signifies whether the applicant is financially dependent on someone else.</p></li>
+<li><p><strong>Education</strong>: This field provides information about the educational status of the applicant.</p></li>
+<li><p><strong>Self_Employed</strong>: This field indicates whether the applicant is self-employed.</p></li>
+<li><p><strong>ApplicantIncome</strong>: This field denotes the income of the applicant.</p></li>
+<li><p><strong>CoApplicantIncome</strong>: This field represents the income of the co-applicant, where a co-applicant is an individual applying jointly with the borrower for a loan.</p></li>
+<li><p><strong>Loan_Amount</strong>: This field indicates the amount of the loan that the applicant borrows from the bank.</p></li>
+<li><p><strong>Loan_Amount_Term</strong>: This field represents the term of the loan amount for each applicant. A term amount loan is characterized by a fixed amount and a predetermined repayment schedule, featuring either a fixed or floating interest rate.</p></li>
+<li><p><strong>Credit_History</strong>: This field signifies the credit history of each applicant, documenting their responsible repayment of debts.</p></li>
+<li><p><strong>Loan_Status</strong>: This field indicates whether the loan is approved or not, denoted by ‘Y’ for approved and ‘N’ for not approved.</p></li>
+</ul>
 <div class="cell" data-execution_count="9">
 <details>
 <summary>Code</summary>
@@ -805,6 +829,9 @@ dtype: int64</code></pre>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+</section>
+<section id="imputation-of-the-missing-values" class="level4">
+<h4 class="anchored" data-anchor-id="imputation-of-the-missing-values">3.2 Imputation of the Missing Values</h4>
 <div class="cell" data-execution_count="11">
 <details>
 <summary>Code</summary>
@@ -956,6 +983,9 @@ dtype: int64</code></pre>
 Name: Loan_Status, Length: 614, dtype: int64</code></pre>
 </div>
 </div>
+</section>
+<section id="k-neighbors-classifier-implementation" class="level4">
+<h4 class="anchored" data-anchor-id="k-neighbors-classifier-implementation">3.3 K Neighbors Classifier implementation</h4>
 <div class="cell" data-execution_count="13">
 <details>
 <summary>Code</summary>
@@ -966,6 +996,8 @@ Name: Loan_Status, Length: 614, dtype: int64</code></pre>
 <style>#sk-container-id-1 {color: black;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>KNeighborsClassifier()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">KNeighborsClassifier</label><div class="sk-toggleable__content"><pre>KNeighborsClassifier()</pre></div></div></div></div></div>
 </div>
 </div>
+<section id="prediction-on-the-test-set" class="level5">
+<h5 class="anchored" data-anchor-id="prediction-on-the-test-set">3.3.1 Prediction on the Test Set</h5>
 <div class="cell" data-execution_count="14">
 <details>
 <summary>Code</summary>
@@ -982,6 +1014,9 @@ Name: Loan_Status, Length: 614, dtype: int64</code></pre>
 Accuracy of the model: 65.58</code></pre>
 </div>
 </div>
+</section>
+<section id="actual-values-and-the-predicted-values" class="level5">
+<h5 class="anchored" data-anchor-id="actual-values-and-the-predicted-values">3.3.2 Actual values and the predicted values</h5>
 <div class="cell" data-execution_count="15">
 <details>
 <summary>Code</summary>
@@ -1064,6 +1099,9 @@ Accuracy of the model: 65.58</code></pre>
 </div>
 </div>
 </div>
+</section>
+<section id="evaluating-the-k-neighbors-classifier-model" class="level5">
+<h5 class="anchored" data-anchor-id="evaluating-the-k-neighbors-classifier-model">3.3.3 Evaluating the K Neighbors Classifier Model</h5>
 <div class="cell" data-execution_count="16">
 <details>
 <summary>Code</summary>
@@ -1098,8 +1136,13 @@ weighted avg       0.61      0.66      0.61       154
 </div>
 </div>
 </section>
+</section>
+</section>
 <section id="decision-tree" class="level3">
 <h3 class="anchored" data-anchor-id="decision-tree">4. Decision Tree</h3>
+</section>
+<section id="implementation-on-the-same-dataset-as-the-k-neighbors-classifier" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-on-the-same-dataset-as-the-k-neighbors-classifier">(implementation on the same dataset as the K-Neighbors Classifier)</h3>
 <div class="cell" data-execution_count="17">
 <details>
 <summary>Code</summary>
@@ -1119,11 +1162,11 @@ weighted avg       0.61      0.66      0.61       154
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Prediction for test set: [1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 0 0 1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 0 0 0
- 1 0 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 1 0
- 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 0 0 0 1 1 1 1 1 1 0 1 1 1
- 1 1 0 0 1 0 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 0 1 1 1 0 1 1 1 1 0 1 1 1
+ 1 0 1 0 1 1 1 1 0 1 1 1 1 0 1 0 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 1 0
+ 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 1 1 1 0 1 1 1
+ 1 1 0 0 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 0 0 0 1 1 1 0 1 1 1 1 0 1 1 1
  1 1 1 0 1 1]
-Accuracy of the model: 66.23</code></pre>
+Accuracy of the model: 67.53</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="19">
@@ -1223,16 +1266,16 @@ Accuracy of the model: 66.23</code></pre>
 <span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(Y_test, prediction_dt))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[16 32]
- [20 86]]
+<pre><code>[[17 31]
+ [19 87]]
               precision    recall  f1-score   support
 
-           0       0.44      0.33      0.38        48
-           1       0.73      0.81      0.77       106
+           0       0.47      0.35      0.40        48
+           1       0.74      0.82      0.78       106
 
-    accuracy                           0.66       154
-   macro avg       0.59      0.57      0.57       154
-weighted avg       0.64      0.66      0.65       154
+    accuracy                           0.68       154
+   macro avg       0.60      0.59      0.59       154
+weighted avg       0.65      0.68      0.66       154
 </code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -1240,9 +1283,16 @@ weighted avg       0.64      0.66      0.65       154
 </div>
 </div>
 </section>
+<section id="results-for-the-load-dataset-by-comparing-both-the-k-neighbors-and-decision-tree-classifiers" class="level3">
+<h3 class="anchored" data-anchor-id="results-for-the-load-dataset-by-comparing-both-the-k-neighbors-and-decision-tree-classifiers">Results for the Load dataset by comparing both the K Neighbors and Decision Tree Classifiers</h3>
+<p><strong>1. KNN:</strong> KNN gve the accuracy of 65.58%.</p>
+<p><strong>2. Decision Tree:</strong> Decision tree gave the accuracy of 67.53%.</p>
+</section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In this blog post, we explored classification algorithms in machine learning, implemented them in Python, and visualized their decision boundaries. We used the Iris and Load datasets as examples and showcased popular classifiers like Naive Bayes, Logistic Regression, K-Nearest Neighbors, and Decision Tree.</p>
+<p>Understanding classification algorithms and their performance is crucial for building accurate machine learning models. Python’s extensive libraries and visualization capabilities make it a powerful tool for this task. Experiment with different datasets and classifiers to gain a deeper understanding of classification in machine learning.</p>
 
 
 <!-- -->
@@ -1680,46 +1730,46 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>In simpler terms, classification serves as a form of pattern recognition, wherein classification algorithms analyze training data to identify similar patterns in new datasets.</span>
 <span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Application of Classification in Machine Learning</span></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Iris Dataset Visualization in Machine Learning</span></span>
 <span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>Various classification methods can be employed depending on the characteristics of the dataset under consideration. This variability stems from the extensive nature of the study of classification in statistics. Below lists the top five machine learning algorithms.</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Python Libraries</span></span>
 <span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Python Libraries</span></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>Before we dive into classification algorithms, we need to set up our environment. We'll be using the following (main) Python libraries:</span>
 <span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>Before we dive into classification algorithms, we need to set up our environment. We'll be using the following Python libraries:</span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`scikit-learn`**: This library provides a wide range of tools for building machine learning models.</span>
 <span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`scikit-learn`**: This library provides a wide range of tools for building machine learning models.</span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`matplotlib`** and **`seaborn`**: These libraries will help us create visualizations.</span>
 <span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`matplotlib`** and **`seaborn`**: These libraries will help us create visualizations.</span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Dataset</span></span>
 <span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dataset Selection</span></span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>For this demonstration, we will use the famous Iris dataset, which contains samples of three different species of iris flowers. The goal is to classify each sample into one of these species.</span>
 <span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a>For this demonstration, we will use the famous Iris dataset, which contains samples of three different species of iris flowers. The goal is to classify each sample into one of these species.</span>
-<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
-<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> load_iris()</span>
-<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data.data</span>
-<span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data.target</span>
-<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> load_iris()</span>
+<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data.data</span>
+<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data.target</span>
+<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Visualizing the Data</span></span>
 <span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualizing the Data</span></span>
-<span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>X[:, <span class="dv">0</span>], y<span class="op">=</span>X[:, <span class="dv">1</span>], hue<span class="op">=</span>data.target_names[y])</span>
-<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a>plt.xlabel(data.feature_names[<span class="dv">0</span>])</span>
-<span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a>plt.ylabel(data.feature_names[<span class="dv">1</span>])</span>
-<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Iris Dataset: Sepal Length vs Sepal Width"</span>)</span>
-<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>X[:, <span class="dv">0</span>], y<span class="op">=</span>X[:, <span class="dv">1</span>], hue<span class="op">=</span>data.target_names[y])</span>
+<span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a>plt.xlabel(data.feature_names[<span class="dv">0</span>])</span>
+<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a>plt.ylabel(data.feature_names[<span class="dv">1</span>])</span>
+<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Iris Dataset: Sepal Length vs Sepal Width"</span>)</span>
+<span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a>This plot shows the separation of iris flowers based on their sepal length and sepal width.</span>
 <span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a>This plot shows the separation of iris flowers based on their sepal length and sepal width.</span>
+<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Types of Classification Algorithms</span></span>
 <span id="cb28-61"><a href="#cb28-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a><span class="fu">## Classification Algorithms</span></span>
+<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a>Various classification methods can be employed depending on the characteristics of the dataset under consideration. This variability stems from the extensive nature of the study of classification in statistics. Below lists the common four machine learning algorithms.</span>
 <span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Naive Bayes</span></span>
 <span id="cb28-65"><a href="#cb28-65" aria-hidden="true" tabindex="-1"></a></span>
@@ -1792,163 +1842,223 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb28-134"><a href="#cb28-134" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb28-135"><a href="#cb28-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-136"><a href="#cb28-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-137"><a href="#cb28-137" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Logistic Regression</span></span>
+<span id="cb28-137"><a href="#cb28-137" aria-hidden="true" tabindex="-1"></a>This visualization demonstrates Naive Bayes Classifier in action on the Iris Dataset, with data points grouped into three classes.</span>
 <span id="cb28-138"><a href="#cb28-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-141"><a href="#cb28-141" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-142"><a href="#cb28-142" aria-hidden="true" tabindex="-1"></a><span class="co">#importing libraries </span></span>
-<span id="cb28-143"><a href="#cb28-143" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># linear algebra</span></span>
-<span id="cb28-144"><a href="#cb28-144" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd <span class="co"># data processing, CSV file I/O (e.g. pd.read_csv)</span></span>
-<span id="cb28-145"><a href="#cb28-145" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb28-146"><a href="#cb28-146" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb28-147"><a href="#cb28-147" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
-<span id="cb28-148"><a href="#cb28-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-149"><a href="#cb28-149" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span> pd.read_csv(<span class="st">"Iris.csv"</span>)</span>
-<span id="cb28-150"><a href="#cb28-150" aria-hidden="true" tabindex="-1"></a>df.drop(<span class="st">"Id"</span>,axis<span class="op">=</span><span class="dv">1</span>,inplace<span class="op">=</span><span class="va">True</span>)    <span class="co">#droping id</span></span>
-<span id="cb28-151"><a href="#cb28-151" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span>
-<span id="cb28-152"><a href="#cb28-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-153"><a href="#cb28-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-156"><a href="#cb28-156" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-157"><a href="#cb28-157" aria-hidden="true" tabindex="-1"></a>sns.FacetGrid(df, hue<span class="op">=</span><span class="st">"Species"</span>, height<span class="op">=</span><span class="dv">5</span>).<span class="bu">map</span>(plt.scatter, <span class="st">"SepalLengthCm"</span>, <span class="st">"SepalWidthCm"</span>).add_legend()</span>
+<span id="cb28-139"><a href="#cb28-139" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Logistic Regression</span></span>
+<span id="cb28-140"><a href="#cb28-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-141"><a href="#cb28-141" aria-hidden="true" tabindex="-1"></a>Below are the preview of the real-world Iris dataset with the following columns:</span>
+<span id="cb28-142"><a href="#cb28-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-143"><a href="#cb28-143" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm, Species</span>
+<span id="cb28-144"><a href="#cb28-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-147"><a href="#cb28-147" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-148"><a href="#cb28-148" aria-hidden="true" tabindex="-1"></a><span class="co">#importing libraries </span></span>
+<span id="cb28-149"><a href="#cb28-149" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># linear algebra</span></span>
+<span id="cb28-150"><a href="#cb28-150" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd <span class="co"># data processing, CSV file I/O (e.g. pd.read_csv)</span></span>
+<span id="cb28-151"><a href="#cb28-151" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb28-152"><a href="#cb28-152" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb28-153"><a href="#cb28-153" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
+<span id="cb28-154"><a href="#cb28-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-155"><a href="#cb28-155" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span> pd.read_csv(<span class="st">"Iris.csv"</span>)</span>
+<span id="cb28-156"><a href="#cb28-156" aria-hidden="true" tabindex="-1"></a>df.drop(<span class="st">"Id"</span>,axis<span class="op">=</span><span class="dv">1</span>,inplace<span class="op">=</span><span class="va">True</span>)    <span class="co">#droping id</span></span>
+<span id="cb28-157"><a href="#cb28-157" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span>
 <span id="cb28-158"><a href="#cb28-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-159"><a href="#cb28-159" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-162"><a href="#cb28-162" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-163"><a href="#cb28-163" aria-hidden="true" tabindex="-1"></a><span class="co">#let Create a pair plot of some columns </span></span>
-<span id="cb28-164"><a href="#cb28-164" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df.iloc[:,:],hue<span class="op">=</span><span class="st">'Species'</span>)  <span class="co"># graph also  tell us about the the realationship between the two columns</span></span>
-<span id="cb28-165"><a href="#cb28-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-166"><a href="#cb28-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-167"><a href="#cb28-167" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. **K-Nearest Neighbors (KNN)**</span></span>
-<span id="cb28-168"><a href="#cb28-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-171"><a href="#cb28-171" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-172"><a href="#cb28-172" aria-hidden="true" tabindex="-1"></a><span class="co">#Importing the Libraries</span></span>
-<span id="cb28-173"><a href="#cb28-173" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb28-174"><a href="#cb28-174" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb28-175"><a href="#cb28-175" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb28-176"><a href="#cb28-176" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb28-177"><a href="#cb28-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-178"><a href="#cb28-178" aria-hidden="true" tabindex="-1"></a><span class="co">#Reading the dataset</span></span>
-<span id="cb28-179"><a href="#cb28-179" aria-hidden="true" tabindex="-1"></a>loan_dataset <span class="op">=</span> pd.read_csv(<span class="st">"train_KNN_DT.csv"</span>)</span>
-<span id="cb28-180"><a href="#cb28-180" aria-hidden="true" tabindex="-1"></a>loan_dataset.head()</span>
-<span id="cb28-181"><a href="#cb28-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-182"><a href="#cb28-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-185"><a href="#cb28-185" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-186"><a href="#cb28-186" aria-hidden="true" tabindex="-1"></a>loan_dataset.isna().<span class="bu">sum</span>()</span>
-<span id="cb28-187"><a href="#cb28-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-188"><a href="#cb28-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-191"><a href="#cb28-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-192"><a href="#cb28-192" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Gender'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Gender'</span>].fillna(loan_dataset[<span class="st">'Gender'</span>].mode().values[<span class="dv">0</span>])</span>
-<span id="cb28-193"><a href="#cb28-193" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Married'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Married'</span>].fillna(loan_dataset[<span class="st">'Married'</span>].mode().values[<span class="dv">0</span>])</span>
-<span id="cb28-194"><a href="#cb28-194" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Dependents'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Dependents'</span>].fillna(loan_dataset[<span class="st">'Dependents'</span>].mode().values[<span class="dv">0</span>])</span>
-<span id="cb28-195"><a href="#cb28-195" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Self_Employed'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Self_Employed'</span>].fillna(loan_dataset[<span class="st">'Self_Employed'</span>].mode().values[<span class="dv">0</span>])</span>
-<span id="cb28-196"><a href="#cb28-196" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'LoanAmount'</span>] <span class="op">=</span> loan_dataset[<span class="st">'LoanAmount'</span>].fillna(loan_dataset[<span class="st">'LoanAmount'</span>].mean())</span>
-<span id="cb28-197"><a href="#cb28-197" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Loan_Amount_Term'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Loan_Amount_Term'</span>].fillna(loan_dataset[<span class="st">'Loan_Amount_Term'</span>].mode().values[<span class="dv">0</span>] )</span>
-<span id="cb28-198"><a href="#cb28-198" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Credit_History'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Credit_History'</span>].fillna(loan_dataset[<span class="st">'Credit_History'</span>].mode().values[<span class="dv">0</span>] )</span>
-<span id="cb28-199"><a href="#cb28-199" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the ID column</span></span>
-<span id="cb28-200"><a href="#cb28-200" aria-hidden="true" tabindex="-1"></a>loan_dataset.drop(<span class="st">'Loan_ID'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a>loan_dataset.head()</span>
-<span id="cb28-202"><a href="#cb28-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-203"><a href="#cb28-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-206"><a href="#cb28-206" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-207"><a href="#cb28-207" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb28-208"><a href="#cb28-208" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.neighbors <span class="im">import</span> KNeighborsClassifier</span>
-<span id="cb28-209"><a href="#cb28-209" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> tree</span>
-<span id="cb28-210"><a href="#cb28-210" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score</span>
-<span id="cb28-211"><a href="#cb28-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-163"><a href="#cb28-163" aria-hidden="true" tabindex="-1"></a>sns.FacetGrid(df, hue<span class="op">=</span><span class="st">"Species"</span>, height<span class="op">=</span><span class="dv">5</span>).<span class="bu">map</span>(plt.scatter, <span class="st">"SepalLengthCm"</span>, <span class="st">"SepalWidthCm"</span>).add_legend()</span>
+<span id="cb28-164"><a href="#cb28-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-165"><a href="#cb28-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-166"><a href="#cb28-166" aria-hidden="true" tabindex="-1"></a>The plot shows the scatterplot by coloring species</span>
+<span id="cb28-167"><a href="#cb28-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-170"><a href="#cb28-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-171"><a href="#cb28-171" aria-hidden="true" tabindex="-1"></a><span class="co">#let Create a pair plot of some columns </span></span>
+<span id="cb28-172"><a href="#cb28-172" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df.iloc[:,:],hue<span class="op">=</span><span class="st">'Species'</span>)  <span class="co"># graph also  tell us about the the realationship between the two columns</span></span>
+<span id="cb28-173"><a href="#cb28-173" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-174"><a href="#cb28-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-175"><a href="#cb28-175" aria-hidden="true" tabindex="-1"></a>The plot shows the pair plot of the Iris dataset with main column feature by species</span>
+<span id="cb28-176"><a href="#cb28-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-177"><a href="#cb28-177" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. **K-Nearest Neighbors (KNN)**</span></span>
+<span id="cb28-178"><a href="#cb28-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-179"><a href="#cb28-179" aria-hidden="true" tabindex="-1"></a>The aim is to identify the customer segments to whom the loan can be granted using the "loan.csv" dataset, below is the preview of the top five rows of the dataset:</span>
+<span id="cb28-180"><a href="#cb28-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-183"><a href="#cb28-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-184"><a href="#cb28-184" aria-hidden="true" tabindex="-1"></a><span class="co">#Importing the Libraries</span></span>
+<span id="cb28-185"><a href="#cb28-185" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb28-186"><a href="#cb28-186" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb28-187"><a href="#cb28-187" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb28-188"><a href="#cb28-188" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb28-189"><a href="#cb28-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-190"><a href="#cb28-190" aria-hidden="true" tabindex="-1"></a><span class="co">#Reading the dataset</span></span>
+<span id="cb28-191"><a href="#cb28-191" aria-hidden="true" tabindex="-1"></a>loan_dataset <span class="op">=</span> pd.read_csv(<span class="st">"train_KNN_DT.csv"</span>)</span>
+<span id="cb28-192"><a href="#cb28-192" aria-hidden="true" tabindex="-1"></a>loan_dataset.head()</span>
+<span id="cb28-193"><a href="#cb28-193" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-194"><a href="#cb28-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-197"><a href="#cb28-197" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-198"><a href="#cb28-198" aria-hidden="true" tabindex="-1"></a>loan_dataset.isna().<span class="bu">sum</span>()</span>
+<span id="cb28-199"><a href="#cb28-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-200"><a href="#cb28-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3.1 Dataset Feature Description</span></span>
+<span id="cb28-202"><a href="#cb28-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-203"><a href="#cb28-203" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Loan_Id**: Each applicant is assigned a unique Loan_Id for individual identification purposes.</span>
+<span id="cb28-204"><a href="#cb28-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-205"><a href="#cb28-205" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Gender**: This field indicates the gender of the applicant.</span>
+<span id="cb28-206"><a href="#cb28-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-207"><a href="#cb28-207" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Married**: This field indicates whether the applicant is currently married.</span>
+<span id="cb28-208"><a href="#cb28-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-209"><a href="#cb28-209" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Dependents**: This field signifies whether the applicant is financially dependent on someone else.</span>
+<span id="cb28-210"><a href="#cb28-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-211"><a href="#cb28-211" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Education**: This field provides information about the educational status of the applicant.</span>
 <span id="cb28-212"><a href="#cb28-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-215"><a href="#cb28-215" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-216"><a href="#cb28-216" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert some object data type to int</span></span>
-<span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a>gender <span class="op">=</span> {<span class="st">"Female"</span>: <span class="dv">0</span>, <span class="st">"Male"</span>: <span class="dv">1</span>}</span>
-<span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a>yes_no <span class="op">=</span> {<span class="st">'No'</span> : <span class="dv">0</span>,<span class="st">'Yes'</span> : <span class="dv">1</span>}</span>
-<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a>dependents <span class="op">=</span> {<span class="st">'0'</span>:<span class="dv">0</span>,<span class="st">'1'</span>:<span class="dv">1</span>,<span class="st">'2'</span>:<span class="dv">2</span>,<span class="st">'3+'</span>:<span class="dv">3</span>}</span>
-<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a>education <span class="op">=</span> {<span class="st">'Not Graduate'</span> : <span class="dv">0</span>, <span class="st">'Graduate'</span> : <span class="dv">1</span>}</span>
-<span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a><span class="bu">property</span> <span class="op">=</span> {<span class="st">'Semiurban'</span> : <span class="dv">0</span>, <span class="st">'Urban'</span> : <span class="dv">1</span>,<span class="st">'Rural'</span> : <span class="dv">2</span>}</span>
-<span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> {<span class="st">"N"</span>: <span class="dv">0</span>, <span class="st">"Y"</span>: <span class="dv">1</span>}</span>
-<span id="cb28-223"><a href="#cb28-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-224"><a href="#cb28-224" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Gender'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Gender'</span>].replace(gender)</span>
-<span id="cb28-225"><a href="#cb28-225" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Married'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Married'</span>].replace(yes_no)</span>
-<span id="cb28-226"><a href="#cb28-226" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Dependents'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Dependents'</span>].replace(dependents)</span>
-<span id="cb28-227"><a href="#cb28-227" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Education'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Education'</span>].replace(education)</span>
-<span id="cb28-228"><a href="#cb28-228" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Self_Employed'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Self_Employed'</span>].replace(yes_no)</span>
-<span id="cb28-229"><a href="#cb28-229" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Property_Area'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Property_Area'</span>].replace(<span class="bu">property</span>)</span>
-<span id="cb28-230"><a href="#cb28-230" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Loan_Status'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Loan_Status'</span>].replace(output)</span>
-<span id="cb28-231"><a href="#cb28-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-232"><a href="#cb28-232" aria-hidden="true" tabindex="-1"></a>loan_dataset.head()</span>
-<span id="cb28-233"><a href="#cb28-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-234"><a href="#cb28-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-237"><a href="#cb28-237" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-238"><a href="#cb28-238" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop "Loan_Status" and assign it to target variable.</span></span>
-<span id="cb28-239"><a href="#cb28-239" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> loan_dataset.Loan_Status</span>
-<span id="cb28-240"><a href="#cb28-240" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span>
-<span id="cb28-241"><a href="#cb28-241" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> loan_dataset.drop(<span class="st">'Loan_Status'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb28-242"><a href="#cb28-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-243"><a href="#cb28-243" aria-hidden="true" tabindex="-1"></a><span class="co">#Splitting the dataset into train and test set</span></span>
-<span id="cb28-244"><a href="#cb28-244" aria-hidden="true" tabindex="-1"></a>X_train, X_test, Y_train, Y_test <span class="op">=</span> train_test_split(x, y, test_size <span class="op">=</span> <span class="fl">0.25</span>, random_state<span class="op">=</span><span class="dv">38</span>, stratify <span class="op">=</span> y)</span>
-<span id="cb28-245"><a href="#cb28-245" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-246"><a href="#cb28-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-249"><a href="#cb28-249" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-250"><a href="#cb28-250" aria-hidden="true" tabindex="-1"></a>knn <span class="op">=</span> KNeighborsClassifier(n_neighbors <span class="op">=</span> <span class="dv">5</span>)</span>
-<span id="cb28-251"><a href="#cb28-251" aria-hidden="true" tabindex="-1"></a>knn.fit(X_train, Y_train)</span>
-<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-253"><a href="#cb28-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-256"><a href="#cb28-256" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-257"><a href="#cb28-257" aria-hidden="true" tabindex="-1"></a>prediction_knn <span class="op">=</span> knn.predict(X_test)</span>
-<span id="cb28-258"><a href="#cb28-258" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Prediction for test set: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(prediction_knn))</span>
-<span id="cb28-259"><a href="#cb28-259" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Accuracy of the model: </span><span class="sc">{:.2f}</span><span class="st">'</span>.<span class="bu">format</span>(accuracy_score(Y_test, prediction_knn)<span class="op">*</span><span class="dv">100</span>))</span>
-<span id="cb28-260"><a href="#cb28-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-261"><a href="#cb28-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-264"><a href="#cb28-264" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-265"><a href="#cb28-265" aria-hidden="true" tabindex="-1"></a><span class="co">#Actual value and the predicted value</span></span>
-<span id="cb28-266"><a href="#cb28-266" aria-hidden="true" tabindex="-1"></a>diff_knn <span class="op">=</span> pd.DataFrame({<span class="st">'Actual value'</span>: Y_test, <span class="st">'Predicted value'</span>: prediction_knn})</span>
-<span id="cb28-267"><a href="#cb28-267" aria-hidden="true" tabindex="-1"></a>diff_knn</span>
-<span id="cb28-268"><a href="#cb28-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-269"><a href="#cb28-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-272"><a href="#cb28-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-273"><a href="#cb28-273" aria-hidden="true" tabindex="-1"></a><span class="co">#Confusion matrix and classification report</span></span>
-<span id="cb28-274"><a href="#cb28-274" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics </span>
-<span id="cb28-275"><a href="#cb28-275" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report, confusion_matrix</span>
-<span id="cb28-276"><a href="#cb28-276" aria-hidden="true" tabindex="-1"></a>con_mat <span class="op">=</span> confusion_matrix(Y_test, prediction_knn)</span>
-<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(con_mat)</span>
-<span id="cb28-278"><a href="#cb28-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-279"><a href="#cb28-279" aria-hidden="true" tabindex="-1"></a>sns.heatmap(con_mat, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">"d"</span>)</span>
-<span id="cb28-280"><a href="#cb28-280" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Confusion Matrix for KNN'</span>)</span>
-<span id="cb28-281"><a href="#cb28-281" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Predicted'</span>)</span>
-<span id="cb28-282"><a href="#cb28-282" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'True'</span>)</span>
-<span id="cb28-283"><a href="#cb28-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-284"><a href="#cb28-284" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(Y_test, prediction_knn))</span>
+<span id="cb28-213"><a href="#cb28-213" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Self_Employed**: This field indicates whether the applicant is self-employed.</span>
+<span id="cb28-214"><a href="#cb28-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-215"><a href="#cb28-215" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**ApplicantIncome**: This field denotes the income of the applicant.</span>
+<span id="cb28-216"><a href="#cb28-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**CoApplicantIncome**: This field represents the income of the co-applicant, where a co-applicant is an individual applying jointly with the borrower for a loan.</span>
+<span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Loan_Amount**: This field indicates the amount of the loan that the applicant borrows from the bank.</span>
+<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Loan_Amount_Term**: This field represents the term of the loan amount for each applicant. A term amount loan is characterized by a fixed amount and a predetermined repayment schedule, featuring either a fixed or floating interest rate.</span>
+<span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-223"><a href="#cb28-223" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Credit_History**: This field signifies the credit history of each applicant, documenting their responsible repayment of debts.</span>
+<span id="cb28-224"><a href="#cb28-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-225"><a href="#cb28-225" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Loan_Status**: This field indicates whether the loan is approved or not, denoted by 'Y' for approved and 'N' for not approved.</span>
+<span id="cb28-226"><a href="#cb28-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-229"><a href="#cb28-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-230"><a href="#cb28-230" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Gender'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Gender'</span>].fillna(loan_dataset[<span class="st">'Gender'</span>].mode().values[<span class="dv">0</span>])</span>
+<span id="cb28-231"><a href="#cb28-231" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Married'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Married'</span>].fillna(loan_dataset[<span class="st">'Married'</span>].mode().values[<span class="dv">0</span>])</span>
+<span id="cb28-232"><a href="#cb28-232" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Dependents'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Dependents'</span>].fillna(loan_dataset[<span class="st">'Dependents'</span>].mode().values[<span class="dv">0</span>])</span>
+<span id="cb28-233"><a href="#cb28-233" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Self_Employed'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Self_Employed'</span>].fillna(loan_dataset[<span class="st">'Self_Employed'</span>].mode().values[<span class="dv">0</span>])</span>
+<span id="cb28-234"><a href="#cb28-234" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'LoanAmount'</span>] <span class="op">=</span> loan_dataset[<span class="st">'LoanAmount'</span>].fillna(loan_dataset[<span class="st">'LoanAmount'</span>].mean())</span>
+<span id="cb28-235"><a href="#cb28-235" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Loan_Amount_Term'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Loan_Amount_Term'</span>].fillna(loan_dataset[<span class="st">'Loan_Amount_Term'</span>].mode().values[<span class="dv">0</span>] )</span>
+<span id="cb28-236"><a href="#cb28-236" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Credit_History'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Credit_History'</span>].fillna(loan_dataset[<span class="st">'Credit_History'</span>].mode().values[<span class="dv">0</span>] )</span>
+<span id="cb28-237"><a href="#cb28-237" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the ID column</span></span>
+<span id="cb28-238"><a href="#cb28-238" aria-hidden="true" tabindex="-1"></a>loan_dataset.drop(<span class="st">'Loan_ID'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb28-239"><a href="#cb28-239" aria-hidden="true" tabindex="-1"></a>loan_dataset.head()</span>
+<span id="cb28-240"><a href="#cb28-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-241"><a href="#cb28-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-244"><a href="#cb28-244" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-245"><a href="#cb28-245" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb28-246"><a href="#cb28-246" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.neighbors <span class="im">import</span> KNeighborsClassifier</span>
+<span id="cb28-247"><a href="#cb28-247" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> tree</span>
+<span id="cb28-248"><a href="#cb28-248" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score</span>
+<span id="cb28-249"><a href="#cb28-249" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-250"><a href="#cb28-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-251"><a href="#cb28-251" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3.2 Imputation of the Missing Values</span></span>
+<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-255"><a href="#cb28-255" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-256"><a href="#cb28-256" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert some object data type to int</span></span>
+<span id="cb28-257"><a href="#cb28-257" aria-hidden="true" tabindex="-1"></a>gender <span class="op">=</span> {<span class="st">"Female"</span>: <span class="dv">0</span>, <span class="st">"Male"</span>: <span class="dv">1</span>}</span>
+<span id="cb28-258"><a href="#cb28-258" aria-hidden="true" tabindex="-1"></a>yes_no <span class="op">=</span> {<span class="st">'No'</span> : <span class="dv">0</span>,<span class="st">'Yes'</span> : <span class="dv">1</span>}</span>
+<span id="cb28-259"><a href="#cb28-259" aria-hidden="true" tabindex="-1"></a>dependents <span class="op">=</span> {<span class="st">'0'</span>:<span class="dv">0</span>,<span class="st">'1'</span>:<span class="dv">1</span>,<span class="st">'2'</span>:<span class="dv">2</span>,<span class="st">'3+'</span>:<span class="dv">3</span>}</span>
+<span id="cb28-260"><a href="#cb28-260" aria-hidden="true" tabindex="-1"></a>education <span class="op">=</span> {<span class="st">'Not Graduate'</span> : <span class="dv">0</span>, <span class="st">'Graduate'</span> : <span class="dv">1</span>}</span>
+<span id="cb28-261"><a href="#cb28-261" aria-hidden="true" tabindex="-1"></a><span class="bu">property</span> <span class="op">=</span> {<span class="st">'Semiurban'</span> : <span class="dv">0</span>, <span class="st">'Urban'</span> : <span class="dv">1</span>,<span class="st">'Rural'</span> : <span class="dv">2</span>}</span>
+<span id="cb28-262"><a href="#cb28-262" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> {<span class="st">"N"</span>: <span class="dv">0</span>, <span class="st">"Y"</span>: <span class="dv">1</span>}</span>
+<span id="cb28-263"><a href="#cb28-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-264"><a href="#cb28-264" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Gender'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Gender'</span>].replace(gender)</span>
+<span id="cb28-265"><a href="#cb28-265" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Married'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Married'</span>].replace(yes_no)</span>
+<span id="cb28-266"><a href="#cb28-266" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Dependents'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Dependents'</span>].replace(dependents)</span>
+<span id="cb28-267"><a href="#cb28-267" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Education'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Education'</span>].replace(education)</span>
+<span id="cb28-268"><a href="#cb28-268" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Self_Employed'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Self_Employed'</span>].replace(yes_no)</span>
+<span id="cb28-269"><a href="#cb28-269" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Property_Area'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Property_Area'</span>].replace(<span class="bu">property</span>)</span>
+<span id="cb28-270"><a href="#cb28-270" aria-hidden="true" tabindex="-1"></a>loan_dataset[<span class="st">'Loan_Status'</span>] <span class="op">=</span> loan_dataset[<span class="st">'Loan_Status'</span>].replace(output)</span>
+<span id="cb28-271"><a href="#cb28-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-272"><a href="#cb28-272" aria-hidden="true" tabindex="-1"></a>loan_dataset.head()</span>
+<span id="cb28-273"><a href="#cb28-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-274"><a href="#cb28-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-278"><a href="#cb28-278" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop "Loan_Status" and assign it to target variable.</span></span>
+<span id="cb28-279"><a href="#cb28-279" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> loan_dataset.Loan_Status</span>
+<span id="cb28-280"><a href="#cb28-280" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span>
+<span id="cb28-281"><a href="#cb28-281" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> loan_dataset.drop(<span class="st">'Loan_Status'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb28-282"><a href="#cb28-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-283"><a href="#cb28-283" aria-hidden="true" tabindex="-1"></a><span class="co">#Splitting the dataset into train and test set</span></span>
+<span id="cb28-284"><a href="#cb28-284" aria-hidden="true" tabindex="-1"></a>X_train, X_test, Y_train, Y_test <span class="op">=</span> train_test_split(x, y, test_size <span class="op">=</span> <span class="fl">0.25</span>, random_state<span class="op">=</span><span class="dv">38</span>, stratify <span class="op">=</span> y)</span>
 <span id="cb28-285"><a href="#cb28-285" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-286"><a href="#cb28-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-287"><a href="#cb28-287" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Decision Tree</span></span>
+<span id="cb28-287"><a href="#cb28-287" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3.3 K Neighbors Classifier implementation</span></span>
 <span id="cb28-288"><a href="#cb28-288" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-291"><a href="#cb28-291" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-292"><a href="#cb28-292" aria-hidden="true" tabindex="-1"></a>dTree <span class="op">=</span> tree.DecisionTreeClassifier()</span>
-<span id="cb28-293"><a href="#cb28-293" aria-hidden="true" tabindex="-1"></a>dTree.fit(X_train, Y_train)</span>
+<span id="cb28-292"><a href="#cb28-292" aria-hidden="true" tabindex="-1"></a>knn <span class="op">=</span> KNeighborsClassifier(n_neighbors <span class="op">=</span> <span class="dv">5</span>)</span>
+<span id="cb28-293"><a href="#cb28-293" aria-hidden="true" tabindex="-1"></a>knn.fit(X_train, Y_train)</span>
 <span id="cb28-294"><a href="#cb28-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-295"><a href="#cb28-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-298"><a href="#cb28-298" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-299"><a href="#cb28-299" aria-hidden="true" tabindex="-1"></a>prediction_dt <span class="op">=</span> dTree.predict(X_test)</span>
-<span id="cb28-300"><a href="#cb28-300" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Prediction for test set: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(prediction_dt))</span>
-<span id="cb28-301"><a href="#cb28-301" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Accuracy of the model: </span><span class="sc">{:.2f}</span><span class="st">'</span>.<span class="bu">format</span>(accuracy_score(Y_test, prediction_dt)<span class="op">*</span><span class="dv">100</span>))</span>
-<span id="cb28-302"><a href="#cb28-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-303"><a href="#cb28-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-306"><a href="#cb28-306" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a><span class="co">#Actual value and the predicted value</span></span>
-<span id="cb28-308"><a href="#cb28-308" aria-hidden="true" tabindex="-1"></a>diff_dt <span class="op">=</span> pd.DataFrame({<span class="st">'Actual value'</span>: Y_test, <span class="st">'Predicted value'</span>: prediction_dt})</span>
-<span id="cb28-309"><a href="#cb28-309" aria-hidden="true" tabindex="-1"></a>diff_dt</span>
-<span id="cb28-310"><a href="#cb28-310" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-311"><a href="#cb28-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-314"><a href="#cb28-314" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-315"><a href="#cb28-315" aria-hidden="true" tabindex="-1"></a><span class="co">#Confusion matrix and classification report</span></span>
-<span id="cb28-316"><a href="#cb28-316" aria-hidden="true" tabindex="-1"></a>con_mat <span class="op">=</span> confusion_matrix(Y_test, prediction_dt)</span>
-<span id="cb28-317"><a href="#cb28-317" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(con_mat)</span>
-<span id="cb28-318"><a href="#cb28-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-319"><a href="#cb28-319" aria-hidden="true" tabindex="-1"></a>sns.heatmap(con_mat, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">"d"</span>)</span>
-<span id="cb28-320"><a href="#cb28-320" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Confusion Matrix for Decision Tree'</span>)</span>
-<span id="cb28-321"><a href="#cb28-321" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Predicted'</span>)</span>
-<span id="cb28-322"><a href="#cb28-322" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'True'</span>)</span>
-<span id="cb28-323"><a href="#cb28-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-324"><a href="#cb28-324" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(Y_test, prediction_dt))</span>
-<span id="cb28-325"><a href="#cb28-325" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-296"><a href="#cb28-296" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 3.3.1 Prediction on the Test Set</span></span>
+<span id="cb28-297"><a href="#cb28-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-300"><a href="#cb28-300" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-301"><a href="#cb28-301" aria-hidden="true" tabindex="-1"></a>prediction_knn <span class="op">=</span> knn.predict(X_test)</span>
+<span id="cb28-302"><a href="#cb28-302" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Prediction for test set: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(prediction_knn))</span>
+<span id="cb28-303"><a href="#cb28-303" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Accuracy of the model: </span><span class="sc">{:.2f}</span><span class="st">'</span>.<span class="bu">format</span>(accuracy_score(Y_test, prediction_knn)<span class="op">*</span><span class="dv">100</span>))</span>
+<span id="cb28-304"><a href="#cb28-304" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-305"><a href="#cb28-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-306"><a href="#cb28-306" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 3.3.2 Actual values and the predicted values</span></span>
+<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-310"><a href="#cb28-310" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-311"><a href="#cb28-311" aria-hidden="true" tabindex="-1"></a><span class="co">#Actual value and the predicted value</span></span>
+<span id="cb28-312"><a href="#cb28-312" aria-hidden="true" tabindex="-1"></a>diff_knn <span class="op">=</span> pd.DataFrame({<span class="st">'Actual value'</span>: Y_test, <span class="st">'Predicted value'</span>: prediction_knn})</span>
+<span id="cb28-313"><a href="#cb28-313" aria-hidden="true" tabindex="-1"></a>diff_knn</span>
+<span id="cb28-314"><a href="#cb28-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-315"><a href="#cb28-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-316"><a href="#cb28-316" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 3.3.3 Evaluating the K Neighbors Classifier Model</span></span>
+<span id="cb28-317"><a href="#cb28-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-320"><a href="#cb28-320" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-321"><a href="#cb28-321" aria-hidden="true" tabindex="-1"></a><span class="co">#Confusion matrix and classification report</span></span>
+<span id="cb28-322"><a href="#cb28-322" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics </span>
+<span id="cb28-323"><a href="#cb28-323" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report, confusion_matrix</span>
+<span id="cb28-324"><a href="#cb28-324" aria-hidden="true" tabindex="-1"></a>con_mat <span class="op">=</span> confusion_matrix(Y_test, prediction_knn)</span>
+<span id="cb28-325"><a href="#cb28-325" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(con_mat)</span>
 <span id="cb28-326"><a href="#cb28-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-327"><a href="#cb28-327" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
+<span id="cb28-327"><a href="#cb28-327" aria-hidden="true" tabindex="-1"></a>sns.heatmap(con_mat, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">"d"</span>)</span>
+<span id="cb28-328"><a href="#cb28-328" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Confusion Matrix for KNN'</span>)</span>
+<span id="cb28-329"><a href="#cb28-329" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Predicted'</span>)</span>
+<span id="cb28-330"><a href="#cb28-330" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'True'</span>)</span>
+<span id="cb28-331"><a href="#cb28-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-332"><a href="#cb28-332" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(Y_test, prediction_knn))</span>
+<span id="cb28-333"><a href="#cb28-333" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-334"><a href="#cb28-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-335"><a href="#cb28-335" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Decision Tree</span></span>
+<span id="cb28-336"><a href="#cb28-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-337"><a href="#cb28-337" aria-hidden="true" tabindex="-1"></a><span class="fu">### (implementation on the same dataset as the K-Neighbors Classifier)</span></span>
+<span id="cb28-338"><a href="#cb28-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-341"><a href="#cb28-341" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-342"><a href="#cb28-342" aria-hidden="true" tabindex="-1"></a>dTree <span class="op">=</span> tree.DecisionTreeClassifier()</span>
+<span id="cb28-343"><a href="#cb28-343" aria-hidden="true" tabindex="-1"></a>dTree.fit(X_train, Y_train)</span>
+<span id="cb28-344"><a href="#cb28-344" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-345"><a href="#cb28-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-348"><a href="#cb28-348" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-349"><a href="#cb28-349" aria-hidden="true" tabindex="-1"></a>prediction_dt <span class="op">=</span> dTree.predict(X_test)</span>
+<span id="cb28-350"><a href="#cb28-350" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Prediction for test set: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(prediction_dt))</span>
+<span id="cb28-351"><a href="#cb28-351" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Accuracy of the model: </span><span class="sc">{:.2f}</span><span class="st">'</span>.<span class="bu">format</span>(accuracy_score(Y_test, prediction_dt)<span class="op">*</span><span class="dv">100</span>))</span>
+<span id="cb28-352"><a href="#cb28-352" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-353"><a href="#cb28-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-356"><a href="#cb28-356" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-357"><a href="#cb28-357" aria-hidden="true" tabindex="-1"></a><span class="co">#Actual value and the predicted value</span></span>
+<span id="cb28-358"><a href="#cb28-358" aria-hidden="true" tabindex="-1"></a>diff_dt <span class="op">=</span> pd.DataFrame({<span class="st">'Actual value'</span>: Y_test, <span class="st">'Predicted value'</span>: prediction_dt})</span>
+<span id="cb28-359"><a href="#cb28-359" aria-hidden="true" tabindex="-1"></a>diff_dt</span>
+<span id="cb28-360"><a href="#cb28-360" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-361"><a href="#cb28-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-364"><a href="#cb28-364" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-365"><a href="#cb28-365" aria-hidden="true" tabindex="-1"></a><span class="co">#Confusion matrix and classification report</span></span>
+<span id="cb28-366"><a href="#cb28-366" aria-hidden="true" tabindex="-1"></a>con_mat <span class="op">=</span> confusion_matrix(Y_test, prediction_dt)</span>
+<span id="cb28-367"><a href="#cb28-367" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(con_mat)</span>
+<span id="cb28-368"><a href="#cb28-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-369"><a href="#cb28-369" aria-hidden="true" tabindex="-1"></a>sns.heatmap(con_mat, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">"d"</span>)</span>
+<span id="cb28-370"><a href="#cb28-370" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Confusion Matrix for Decision Tree'</span>)</span>
+<span id="cb28-371"><a href="#cb28-371" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Predicted'</span>)</span>
+<span id="cb28-372"><a href="#cb28-372" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'True'</span>)</span>
+<span id="cb28-373"><a href="#cb28-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-374"><a href="#cb28-374" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(Y_test, prediction_dt))</span>
+<span id="cb28-375"><a href="#cb28-375" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-376"><a href="#cb28-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-377"><a href="#cb28-377" aria-hidden="true" tabindex="-1"></a><span class="fu">### Results for the Load dataset by comparing both the K Neighbors and Decision Tree Classifiers</span></span>
+<span id="cb28-378"><a href="#cb28-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-379"><a href="#cb28-379" aria-hidden="true" tabindex="-1"></a>**1. KNN:** KNN gve the accuracy of 65.58%.</span>
+<span id="cb28-380"><a href="#cb28-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-381"><a href="#cb28-381" aria-hidden="true" tabindex="-1"></a>**2. Decision Tree:** Decision tree gave the accuracy of 67.53%.</span>
+<span id="cb28-382"><a href="#cb28-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-383"><a href="#cb28-383" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
+<span id="cb28-384"><a href="#cb28-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-385"><a href="#cb28-385" aria-hidden="true" tabindex="-1"></a>In this blog post, we explored classification algorithms in machine learning, implemented them in Python, and visualized their decision boundaries. We used the Iris and Load datasets as examples and showcased popular classifiers like Naive Bayes, Logistic Regression, K-Nearest Neighbors, and Decision Tree.</span>
+<span id="cb28-386"><a href="#cb28-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-387"><a href="#cb28-387" aria-hidden="true" tabindex="-1"></a>Understanding classification algorithms and their performance is crucial for building accurate machine learning models. Python's extensive libraries and visualization capabilities make it a powerful tool for this task. Experiment with different datasets and classifiers to gain a deeper understanding of classification in machine learning.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

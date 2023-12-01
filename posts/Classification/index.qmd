@@ -16,19 +16,17 @@ The Classification algorithm, as a [Supervised Learning](https://en.wikipedia.or
 
 In simpler terms, classification serves as a form of pattern recognition, wherein classification algorithms analyze training data to identify similar patterns in new datasets.
 
-## Application of Classification in Machine Learning
+## Iris Dataset Visualization in Machine Learning
 
-Various classification methods can be employed depending on the characteristics of the dataset under consideration. This variability stems from the extensive nature of the study of classification in statistics. Below lists the top five machine learning algorithms.
+### 1. Python Libraries
 
-## Python Libraries
-
-Before we dive into classification algorithms, we need to set up our environment. We'll be using the following Python libraries:
+Before we dive into classification algorithms, we need to set up our environment. We'll be using the following (main) Python libraries:
 
 -   **`scikit-learn`**: This library provides a wide range of tools for building machine learning models.
 
 -   **`matplotlib`** and **`seaborn`**: These libraries will help us create visualizations.
 
-## Dataset Selection
+### 2. Dataset
 
 For this demonstration, we will use the famous Iris dataset, which contains samples of three different species of iris flowers. The goal is to classify each sample into one of these species.
 
@@ -40,7 +38,7 @@ X = data.data
 y = data.target
 ```
 
-## Visualizing the Data
+### 3. Visualizing the Data
 
 ```{python}
 import matplotlib.pyplot as plt
@@ -55,7 +53,9 @@ plt.show()
 
 This plot shows the separation of iris flowers based on their sepal length and sepal width.
 
-## Classification Algorithms
+## Types of Classification Algorithms
+
+Various classification methods can be employed depending on the characteristics of the dataset under consideration. This variability stems from the extensive nature of the study of classification in statistics. Below lists the common four machine learning algorithms.
 
 ### 1. Naive Bayes
 
@@ -128,7 +128,13 @@ plt.legend()
 plt.show()
 ```
 
+This visualization demonstrates Naive Bayes Classifier in action on the Iris Dataset, with data points grouped into three classes.
+
 ### 2. Logistic Regression
+
+Below are the preview of the real-world Iris dataset with the following columns:
+
+-   Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm, Species
 
 ```{python}
 #importing libraries 
@@ -147,12 +153,18 @@ df.head(5)
 sns.FacetGrid(df, hue="Species", height=5).map(plt.scatter, "SepalLengthCm", "SepalWidthCm").add_legend()
 ```
 
+The plot shows the scatterplot by coloring species
+
 ```{python}
 #let Create a pair plot of some columns 
 sns.pairplot(df.iloc[:,:],hue='Species')  # graph also  tell us about the the realationship between the two columns
 ```
 
+The plot shows the pair plot of the Iris dataset with main column feature by species
+
 ### 3. **K-Nearest Neighbors (KNN)**
+
+The aim is to identify the customer segments to whom the loan can be granted using the "loan.csv" dataset, below is the preview of the top five rows of the dataset:
 
 ```{python}
 
@@ -170,6 +182,32 @@ loan_dataset.head()
 ```{python}
 loan_dataset.isna().sum()
 ```
+
+#### 3.1 Dataset Feature Description
+
+-   **Loan_Id**: Each applicant is assigned a unique Loan_Id for individual identification purposes.
+
+-   **Gender**: This field indicates the gender of the applicant.
+
+-   **Married**: This field indicates whether the applicant is currently married.
+
+-   **Dependents**: This field signifies whether the applicant is financially dependent on someone else.
+
+-   **Education**: This field provides information about the educational status of the applicant.
+
+-   **Self_Employed**: This field indicates whether the applicant is self-employed.
+
+-   **ApplicantIncome**: This field denotes the income of the applicant.
+
+-   **CoApplicantIncome**: This field represents the income of the co-applicant, where a co-applicant is an individual applying jointly with the borrower for a loan.
+
+-   **Loan_Amount**: This field indicates the amount of the loan that the applicant borrows from the bank.
+
+-   **Loan_Amount_Term**: This field represents the term of the loan amount for each applicant. A term amount loan is characterized by a fixed amount and a predetermined repayment schedule, featuring either a fixed or floating interest rate.
+
+-   **Credit_History**: This field signifies the credit history of each applicant, documenting their responsible repayment of debts.
+
+-   **Loan_Status**: This field indicates whether the loan is approved or not, denoted by 'Y' for approved and 'N' for not approved.
 
 ```{python}
 loan_dataset['Gender'] = loan_dataset['Gender'].fillna(loan_dataset['Gender'].mode().values[0])
@@ -190,6 +228,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 ```
+
+#### 3.2 Imputation of the Missing Values
 
 ```{python}
 #Convert some object data type to int
@@ -221,10 +261,14 @@ x = loan_dataset.drop('Loan_Status', axis=1, inplace=False)
 X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size = 0.25, random_state=38, stratify = y)
 ```
 
+#### 3.3 K Neighbors Classifier implementation
+
 ```{python}
 knn = KNeighborsClassifier(n_neighbors = 5)
 knn.fit(X_train, Y_train)
 ```
+
+##### 3.3.1 Prediction on the Test Set
 
 ```{python}
 prediction_knn = knn.predict(X_test)
@@ -232,11 +276,15 @@ print("Prediction for test set: {}".format(prediction_knn))
 print('Accuracy of the model: {:.2f}'.format(accuracy_score(Y_test, prediction_knn)*100))
 ```
 
+##### 3.3.2 Actual values and the predicted values
+
 ```{python}
 #Actual value and the predicted value
 diff_knn = pd.DataFrame({'Actual value': Y_test, 'Predicted value': prediction_knn})
 diff_knn
 ```
+
+##### 3.3.3 Evaluating the K Neighbors Classifier Model
 
 ```{python}
 #Confusion matrix and classification report
@@ -254,6 +302,8 @@ print(classification_report(Y_test, prediction_knn))
 ```
 
 ### 4. Decision Tree
+
+### (implementation on the same dataset as the K-Neighbors Classifier)
 
 ```{python}
 dTree = tree.DecisionTreeClassifier()
@@ -285,4 +335,14 @@ plt.ylabel('True')
 print(classification_report(Y_test, prediction_dt))
 ```
 
+### Results for the Load dataset by comparing both the K Neighbors and Decision Tree Classifiers
+
+**1. KNN:** KNN gve the accuracy of 65.58%.
+
+**2. Decision Tree:** Decision tree gave the accuracy of 67.53%.
+
 ## Conclusion
+
+In this blog post, we explored classification algorithms in machine learning, implemented them in Python, and visualized their decision boundaries. We used the Iris and Load datasets as examples and showcased popular classifiers like Naive Bayes, Logistic Regression, K-Nearest Neighbors, and Decision Tree.
+
+Understanding classification algorithms and their performance is crucial for building accurate machine learning models. Python's extensive libraries and visualization capabilities make it a powerful tool for this task. Experiment with different datasets and classifiers to gain a deeper understanding of classification in machine learning.
