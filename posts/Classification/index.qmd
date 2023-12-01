@@ -114,11 +114,11 @@ print(classification_rep)
 plt.figure(figsize=(8, 6))
 
 # Plot training points
-for i, c in zip(range(3), ['red', 'green', 'blue']):
+for i, c in zip(range(3), ['maroon', 'orange', 'magenta']):
     plt.scatter(X_train[y_train == i, 0], X_train[y_train == i, 1], c=c, label=f'Class {i}', edgecolors='k')
 
 # Plot testing points
-for i, c in zip(range(3), ['red', 'green', 'blue']):
+for i, c in zip(range(3), ['maroon', 'orange', 'magenta']):
     plt.scatter(X_test[y_test == i, 0], X_test[y_test == i, 1], c=c, marker='x', s=150, linewidth=2)
 
 plt.title('Naive Bayes Classifier - Iris Dataset')
@@ -293,7 +293,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 con_mat = confusion_matrix(Y_test, prediction_knn)
 print(con_mat)
 
-sns.heatmap(con_mat, annot=True, fmt="d")
+sns.heatmap(con_mat, annot=True, fmt="d", cmap='YlGnBu')
 plt.title('Confusion Matrix for KNN')
 plt.xlabel('Predicted')
 plt.ylabel('True')
@@ -327,7 +327,7 @@ diff_dt
 con_mat = confusion_matrix(Y_test, prediction_dt)
 print(con_mat)
 
-sns.heatmap(con_mat, annot=True, fmt="d")
+sns.heatmap(con_mat, annot=True, fmt="d", cmap='YlGnBu')
 plt.title('Confusion Matrix for Decision Tree')
 plt.xlabel('Predicted')
 plt.ylabel('True')

@@ -118,7 +118,7 @@ X_train, y_train = X[:n_train_samples], y[:n_train_samples]
 X_test, y_test = X[n_train_samples:], y[n_train_samples:]
 
 import matplotlib.pyplot as plt
-plt.scatter(X_train[:, 0], X_train[:, 1], c=y_train)
+plt.scatter(X_train[:, 0], X_train[:, 1], c=y_train, cmap='plasma')
 plt.axis('off')
 ```
 
@@ -149,7 +149,7 @@ fraction_of_positives, mean_predicted_value = calibration_curve(y_test, y_test_p
 import seaborn as sns
 
 fig, ax = plt.subplots(1, figsize=(12, 6))
-plt.plot(mean_predicted_value, fraction_of_positives, 's-')
+plt.plot(mean_predicted_value, fraction_of_positives, 's-', color='green')
 plt.plot([0, 1], [0, 1], '--', color='gray')
 
 sns.despine(left=True, bottom=True)
@@ -175,7 +175,7 @@ y_test_predict_proba = clf.predict_proba(X_test)[:, 1]
 fraction_of_positives, mean_predicted_value = calibration_curve(y_test, y_test_predict_proba, n_bins=10)
 
 fig, ax = plt.subplots(1, figsize=(12, 6))
-plt.plot(mean_predicted_value, fraction_of_positives, 's-')
+plt.plot(mean_predicted_value, fraction_of_positives, 's-', color='green')
 plt.plot([0, 1], [0, 1], '--', color='gray')
 
 sns.despine(left=True, bottom=True)
@@ -228,7 +228,7 @@ clf_sigmoid.fit(X_train, y_train)
 y_test_predict_proba = clf_sigmoid.predict_proba(X_test)[:, 1]
 fraction_of_positives, mean_predicted_value = calibration_curve(y_test, y_test_predict_proba, n_bins=10)
 
-plt.plot(mean_predicted_value, fraction_of_positives, 's-', label='Calibrated (Platt)')
+plt.plot(mean_predicted_value, fraction_of_positives, 's-', color='green', label='Calibrated (Platt)')
 plt.plot([0, 1], [0, 1], '--', color='gray')
 
 sns.despine(left=True, bottom=True)
@@ -251,7 +251,7 @@ clf.fit(X_train, y_train)
 y_test_predict_proba = clf.predict_proba(X_test)[:, 1]
 fraction_of_positives, mean_predicted_value = calibration_curve(y_test, y_test_predict_proba, n_bins=10)
 
-plt.plot(mean_predicted_value, fraction_of_positives, 's-', label='Uncalibrated')
+plt.plot(mean_predicted_value, fraction_of_positives, 's-', color='green', label='Uncalibrated')
 
 # Calibrated
 clf_sigmoid = CalibratedClassifierCV(clf, cv=3, method='isotonic')

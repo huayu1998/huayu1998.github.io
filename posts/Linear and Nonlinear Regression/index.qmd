@@ -84,8 +84,8 @@ ypred = alpha + beta * X
 
 # Plot regression against actual data
 plt.figure(figsize=(12, 6))
-plt.plot(X, ypred)     # regression line
-plt.plot(X, y, 'ro')   # scatter plot showing actual data
+plt.plot(X, ypred, color='maroon')     # regression line
+plt.plot(X, y, 'ro', color='orange')   # scatter plot showing actual data
 plt.title('Actual vs Predicted')
 plt.xlabel('X')
 plt.ylabel('y')
@@ -118,8 +118,8 @@ sales_pred = model.predict()
 
 # Plot regression against actual data
 plt.figure(figsize=(12, 6))
-plt.plot(advert['TV'], advert['Sales'], 'o')           # scatter plot showing actual data
-plt.plot(advert['TV'], sales_pred, 'r', linewidth=2)   # regression line
+plt.plot(advert['TV'], advert['Sales'], 'o', color='orange')           # scatter plot showing actual data
+plt.plot(advert['TV'], sales_pred, 'r', linewidth=2, color='maroon')   # regression line
 plt.xlabel('TV Advertising Costs')
 plt.ylabel('Sales')
 plt.title('TV vs Sales')
@@ -199,7 +199,7 @@ y_p = StdS_y.fit_transform(y_p)
 ```
 
 ```{python}
-plt.scatter(X_l, y_p, color = 'red') # plotting the training set
+plt.scatter(X_l, y_p, color = 'maroon') # plotting the training set
 plt.title('Scatter Plot') # adding a tittle to our plot
 plt.xlabel('Levels') # adds a label to the x-axis
 plt.ylabel('Salary') # adds a label to the y-axis
@@ -228,8 +228,8 @@ Now that we have learned how to implement the SVR model and make predictions, th
 
 ```{python}
 # inverse the transformation to go back to the initial scale
-plt.scatter(StdS_X.inverse_transform(X_l), StdS_y.inverse_transform(y_p), color = 'red')
-plt.plot(StdS_X.inverse_transform(X_l), StdS_y.inverse_transform(regressor.predict(X_l).reshape(-1,1)), color = 'blue')
+plt.scatter(StdS_X.inverse_transform(X_l), StdS_y.inverse_transform(y_p), color = 'maroon')
+plt.plot(StdS_X.inverse_transform(X_l), StdS_y.inverse_transform(regressor.predict(X_l).reshape(-1,1)), color = 'orange')
 # add the title to the plot
 plt.title('Support Vector Regression Model')
 # label x axis
